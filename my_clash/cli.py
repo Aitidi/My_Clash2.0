@@ -31,6 +31,11 @@ def parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    # Redirected Windows consoles may default to an ANSI code page. Keep CLI
+    # output UTF-8 just like the configuration files, including argparse help.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     args = parser().parse_args(argv)
     try:
         project = Project(args.root)
