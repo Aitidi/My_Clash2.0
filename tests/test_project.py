@@ -52,6 +52,7 @@ class RegressionTests(unittest.TestCase):
 
     def test_all_files_preserved_and_valid_after_rendering(self):
         self.assertEqual(len(self.project.rules), 161)
+        self.assertEqual(list(self.project.rules), sorted(self.project.rules))
         output = render(self.project)
         for name, value in self.project.rules.items():
             with self.subTest(name=name):

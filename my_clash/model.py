@@ -146,7 +146,8 @@ class Project:
         self.base_url = check_url(self.policy["publish"]["base_url"], base=True)
         self.groups = expand_groups(self.policy)
         self.rules: dict[str, RuleList] = {}
-        for path in sorted((self.root / "rules").rglob("*.list")):
+        paths = (self.root / "rules").rglob("*.list")
+        for path in sorted(paths, key=lambda item: item.relative_to(self.root / "rules").as_posix()):
             if not path.resolve().is_relative_to(self.root / "rules"):
                 raise ConfigError(f"规则文件越出 rules 目录: {path}")
             relative = path.relative_to(self.root / "rules").as_posix()
