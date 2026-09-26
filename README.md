@@ -6,10 +6,10 @@
 https://raw.githubusercontent.com/Aitidi/My_Clash2.0/main/Config/my_config.ini
 ```
 
-`Config/my_config.ini` 引用本仓库 `Ruleset/` 中的 39 份规则列表，按用途分为：
+`Config/my_config.ini` 引用本仓库 `Ruleset/` 中的 38 份规则列表，按用途分为：
 
 - `Ruleset/Block/`：6 份拦截规则
-- `Ruleset/Direct/`：14 份直连规则
+- `Ruleset/Direct/`：13 份直连规则
 - `Ruleset/Service/`：19 份服务及加速规则
 
 规则按顺序匹配：先拦截，再直连，然后匹配服务及兜底规则。`.cn` 域名直连；共享基础设施 `akadns.net` 和 `omniroot.com` 也直连。
