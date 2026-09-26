@@ -6,11 +6,11 @@
 https://raw.githubusercontent.com/Aitidi/My_Clash2.0/main/Config/my_config.ini
 ```
 
-`Config/my_config.ini` 引用本仓库 `Ruleset/` 中的 40 份规则列表，按用途分为：
+`Config/my_config.ini` 引用本仓库 `Ruleset/` 中的 39 份规则列表，按用途分为：
 
 - `Ruleset/Block/`：6 份拦截规则
 - `Ruleset/Direct/`：14 份直连规则
-- `Ruleset/Service/`：20 份服务及加速规则
+- `Ruleset/Service/`：19 份服务及加速规则
 
 转换器需要能够访问 GitHub Raw。修改规则时直接编辑对应 `.list`；调整分组或引用顺序时编辑 `Config/my_config.ini`。
 
