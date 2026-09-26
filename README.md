@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/Aitidi/My_Clash2.0/main/Config/my_config.ini
 - `Ruleset/Direct/`：14 份直连规则
 - `Ruleset/Service/`：19 份服务及加速规则
 
-规则按顺序匹配：先拦截，再匹配 6 条需要优先于 `.cn` 直连的专属服务规则，然后直连、其余服务及兜底规则。共享基础设施 `akadns.net` 和 `omniroot.com` 直连。
+规则按顺序匹配：先拦截，再直连，然后匹配服务及兜底规则。`.cn` 域名直连；共享基础设施 `akadns.net` 和 `omniroot.com` 也直连。
 
 转换器需要能够访问 GitHub Raw。修改规则时直接编辑对应 `.list`；调整分组或引用顺序时编辑 `Config/my_config.ini`。
 
