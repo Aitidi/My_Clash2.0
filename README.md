@@ -6,9 +6,9 @@
 https://raw.githubusercontent.com/Aitidi/My_Clash2.0/main/Config/my_config.ini
 ```
 
-`Config/my_config.ini` 引用本仓库 `Ruleset/` 中的 38 份规则列表，按用途分为：
+`Config/my_config.ini` 引用本仓库 `Ruleset/` 中的 39 份规则列表，按用途分为：
 
-- `Ruleset/Block/`：6 份拦截规则
+- `Ruleset/Block/`：7 份拦截规则
 - `Ruleset/Direct/`：13 份直连规则
 - `Ruleset/Service/`：19 份服务及加速规则
 
