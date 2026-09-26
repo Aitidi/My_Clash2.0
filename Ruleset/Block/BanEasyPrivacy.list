@@ -2,7 +2,7 @@
 # 内容：EasyPrivacy列表，隐私保护，屏蔽隐私追踪
 # 来源：https://easylist-downloads.adblockplus.org/easyprivacy.txt
 # 更新：2025-12-06 10:24:39
-# 数量：39852条
+# 数量：39848条
 
 DOMAIN-SUFFIX,0.myikas.com
 DOMAIN-SUFFIX,0.net.easyjet.com
@@ -248,7 +248,6 @@ DOMAIN-SUFFIX,a.ipoque.com
 DOMAIN-SUFFIX,a.itim.es
 DOMAIN-SUFFIX,a.itsmore.cn
 DOMAIN-SUFFIX,a.jaz-hotel.com
-DOMAIN-SUFFIX,a.koodomobile.com
 DOMAIN-SUFFIX,a.lifehacker.ru
 DOMAIN-SUFFIX,a.linkz.ai
 DOMAIN-SUFFIX,a.lls.org
@@ -7094,7 +7093,6 @@ DOMAIN-SUFFIX,b.home.com.au
 DOMAIN-SUFFIX,b.iheart.southwest.com
 DOMAIN-SUFFIX,b.itravel.southwest.com
 DOMAIN-SUFFIX,b.iwanna.southwest.com
-DOMAIN-SUFFIX,b.koodomobile.com
 DOMAIN-SUFFIX,b.law.com
 DOMAIN-SUFFIX,b.lyst.com
 DOMAIN-SUFFIX,b.m.mynewplace.com
@@ -12461,7 +12459,6 @@ DOMAIN-SUFFIX,fdxtbs.meeters.org
 DOMAIN-SUFFIX,fea-cfd.simutechgroup.com
 DOMAIN-SUFFIX,feature-flag-edge.live.clickbus.net
 DOMAIN-SUFFIX,featured.bradyid.com
-DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,febcyv.joshi-spa.jp
 DOMAIN-SUFFIX,fedexfield.redskins.com
 DOMAIN-SUFFIX,fedsched.actonservice.com
@@ -36053,7 +36050,6 @@ DOMAIN-SUFFIX,tracking.medicalcloud.janssen.com.tr
 DOMAIN-SUFFIX,tracking.mediwel.net
 DOMAIN-SUFFIX,tracking.mhealthintelligence.com
 DOMAIN-SUFFIX,tracking.mindshiftonline.com
-DOMAIN-SUFFIX,tracking.miui.com
 DOMAIN-SUFFIX,tracking.mizuhogroup.com
 DOMAIN-SUFFIX,tracking.mjbizconference.com
 DOMAIN-SUFFIX,tracking.mjbizdaily.com
