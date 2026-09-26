@@ -1,7 +1,7 @@
-# 来源与归属
+# 规则来源与许可
 
-规则数据和原始配置迁移自 https://github.com/Aitidi/My_Clash ，基线提交记录在 `settings/provenance.json`。
+本仓库配置与部分规则迁移自 [Aitidi/My_Clash](https://github.com/Aitidi/My_Clash)，迁移基线提交为 `ee8a9461374a480c4cb858073ab7585ff0377155`。
 
-根目录的 `Ruleset/`、`BlockAD/` 仅保留当前配置引用的文件与其中的来源注释。23 份规则来自 [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)，锁定的上游提交与各文件路径、SHA-256 见 `settings/acl4ssr.yaml` 和 `settings/acl4ssr-lock.json`。
+其中 23 份规则取自 [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) 的提交 `46ce840aa8cbfccce071558bfc1ad57704e32219`。规则内容及原有注释保留，部分文件为匹配本仓库的分类目录而调整了路径。
 
-ACL4SSR 项目以 CC BY-SA 4.0 发布；许可证原文保存在 `third_party/ACL4SSR-LICENCE`。本仓库保留所引用的 ACL4SSR 原始文件与注释，相关规则遵循该许可证。原 My_Clash 快照未提供统一 LICENSE；其他来源内容以规则文件原有说明为准。
+ACL4SSR 按 CC BY-SA 4.0 发布；许可证原文见 [third_party/ACL4SSR-LICENCE](third_party/ACL4SSR-LICENCE)。其他来源的说明以规则文件中的注释为准。
