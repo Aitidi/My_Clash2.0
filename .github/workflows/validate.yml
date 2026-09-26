@@ -4,11 +4,6 @@ on:
   push:
   pull_request:
   workflow_dispatch:
-    inputs:
-      check_sources:
-        description: Check live external rules (requires network)
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -36,5 +31,3 @@ jobs:
         with:
           name: configuration-${{ matrix.os }}-${{ matrix.python }}
           path: dist/package/
-      - if: ${{ github.event_name == 'workflow_dispatch' && inputs.check_sources && matrix.os == 'ubuntu-latest' && matrix.python == '3.14' }}
-        run: python -m my_clash check-sources

@@ -1,6 +1,8 @@
 """Load and validate policy data before any generated file is written."""
 
 from copy import deepcopy
+from hashlib import sha256
+import json
 from pathlib import Path, PurePosixPath
 import re
 from urllib.parse import urlsplit
@@ -158,6 +160,7 @@ class Project:
             raise ConfigError("rules 目录没有规则文件")
         self.routes = self.policy["routes"]
         self._validate_routes()
+        self._validate_vendor_lock()
         self.dns = load_yaml(self.root / "settings/dns.yaml")
         self._validate_dns()
 
@@ -190,6 +193,41 @@ class Project:
                 raise ConfigError("FINAL 必须位于最后一条路由")
         if self.routes[-1].get("rule") != "FINAL":
             raise ConfigError("缺少最后的 FINAL 兜底规则")
+        used = {route["file"] for route in self.routes if "file" in route}
+        unused = set(self.rules) - used
+        if unused:
+            raise ConfigError("存在未引用的规则文件: " + ", ".join(sorted(unused)))
+
+    def _validate_vendor_lock(self):
+        manifest_path = self.root / "settings/acl4ssr.yaml"
+        lock_path = self.root / "settings/acl4ssr-lock.json"
+        if not manifest_path.exists() and not lock_path.exists():
+            return
+        if not manifest_path.exists() or not lock_path.exists():
+            raise ConfigError("ACL4SSR 清单或锁定文件缺失")
+        manifest = load_yaml(manifest_path)
+        try:
+            lock = json.loads(lock_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            raise ConfigError(f"ACL4SSR 锁定文件无效: {exc}") from exc
+        if (
+            not isinstance(lock, dict) or lock.get("commit") != manifest.get("commit")
+            or lock.get("repository") != manifest.get("repository")
+            or not isinstance(manifest.get("files"), list)
+            or not isinstance(lock.get("files"), list)
+        ):
+            raise ConfigError("ACL4SSR 清单与锁定文件不一致")
+        mapping = {item["file"]: item["source"] for item in manifest["files"]}
+        locked = {item["file"]: item for item in lock["files"]}
+        if len(mapping) != len(manifest["files"]) or len(locked) != len(lock["files"]) or set(mapping) != set(locked):
+            raise ConfigError("ACL4SSR 文件映射缺失或重复")
+        used = {route["file"] for route in self.routes if "file" in route}
+        for name, source in mapping.items():
+            if name not in used or name not in self.rules or locked[name]["source"] != source:
+                raise ConfigError(f"ACL4SSR 规则未引用或来源不符: {name}")
+            digest = sha256((self.root / "rules" / name).read_bytes()).hexdigest()
+            if locked[name]["sha256"] != digest:
+                raise ConfigError(f"ACL4SSR 规则与锁定校验值不符: {name}")
 
     def _validate_dns(self):
         if self.dns.get("enable") is not True or self.dns.get("enhanced-mode") != "fake-ip":

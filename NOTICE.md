@@ -2,6 +2,6 @@
 
 规则数据和原始配置迁移自 https://github.com/Aitidi/My_Clash ，基线提交记录在 `settings/provenance.json`。
 
-`rules/` 保留原始文件及注释；来源包括 ACL4SSR 和原文件中标注的其他作者。`settings/policy.yaml` 中的外部规则继续直接引用 https://github.com/ACL4SSR/ACL4SSR 。AdobeBan 中保留了其原作者、上游地址和使用说明，但默认路由没有启用该列表。
+`rules/` 仅保留当前配置引用的文件与其中的来源注释。23 份规则来自 [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)，锁定的上游提交与各文件路径、SHA-256 见 `settings/acl4ssr.yaml` 和 `settings/acl4ssr-lock.json`。
 
-原仓库快照未提供统一 LICENSE。本次重构不为第三方规则重新指定授权；分发或再次使用时应遵循相应上游的许可和要求。生成产物可由文件头追溯到 `rules/` 中保留注释的原始文件。
+ACL4SSR 项目以 CC BY-SA 4.0 发布；许可证原文保存在 `third_party/ACL4SSR-LICENCE`。本仓库中的 ACL4SSR 文件经过配置生成时的格式标准化，所含上游规则仍遵循该许可证。原 My_Clash 快照未提供统一 LICENSE；其他来源内容以源文件原有说明为准。生成产物可由文件头追溯到 `rules/` 中的原始文件。

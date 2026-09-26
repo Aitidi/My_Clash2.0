@@ -35,7 +35,7 @@ http://127.0.0.1:8000/Config/my_config.ini
 
 配置服务仅监听 `127.0.0.1`，仅提供 `dist/local/` 内的生成产物，不提供仓库源码。保持它运行，再在本机转换工具中填写自己的订阅链接。修改源文件后重启服务即可重新生成。端口可通过 `--port 8001` 调整。
 
-**这里的 127.0.0.1 指转换后端所在的机器。** 远程在线转换后端不能访问你的本机服务；Docker 容器也有独立的回环地址。本用法针对直接运行在同一台电脑上的 subconverter。23 份 ACL4SSR 外部规则仍需联网读取，启动配置服务不等于完全离线转换。
+**这里的 127.0.0.1 指转换后端所在的机器。** 远程在线转换后端不能访问你的本机服务；Docker 容器也有独立的回环地址。本用法针对直接运行在同一台电脑上的 subconverter。当前配置引用的规则全部由本机服务提供；仅更新上游快照时需要下载 ACL4SSR 文件。
 
 subconverter 的 `config` 参数及订阅 URL 需要 URL 编码，具体调用方法见 [官方说明](https://github.com/tindy2013/subconverter/blob/master/README-cn.md#简易用法)。本项目不接收、保存或上传你的订阅链接。
 
@@ -61,7 +61,7 @@ python -m my_clash build --base-url https://your-host.example/my-clash --output 
 
 | 修改内容 | 编辑位置 |
 | --- | --- |
-| 路由顺序、目标策略、外部规则地址 | `settings/policy.yaml` 的 `routes` |
+| 路由顺序、目标策略、规则文件引用 | `settings/policy.yaml` 的 `routes` |
 | 分组和地区正则 | `settings/policy.yaml` 的 `groups` |
 | 多个服务共用的选项 | `settings/policy.yaml` 的 `group_templates` |
 | DNS | `settings/dns.yaml` |
@@ -76,7 +76,7 @@ python -m unittest discover -s tests -v
 python -m my_clash build --check
 ```
 
-规则按原有顺序匹配。新增 `.list` 文件会导出到兼容路径，但**不会自动启用分流**，还需要在 `routes` 中添加引用。维护示例见 [架构与开发说明](docs/architecture.md)。
+规则按原有顺序匹配。每份源 `.list` 必须在 `routes` 中引用；未引用的文件会使校验失败。维护示例见 [架构与开发说明](docs/architecture.md)。
 
 不要直接修改根目录下的 `Ruleset/`、`BlockAD/`、`Config/my_config.ini`、`Config/dns_config.yaml` 或 `Config/catalog.json`，这些都是生成产物。提交时同时提交源文件和生成产物；CI 会检查两者一致。
 
@@ -85,14 +85,14 @@ python -m my_clash build --check
 | 命令 | 用途 |
 | --- | --- |
 | `python -m my_clash validate` | 离线检查规则语法、路径大小写、分组引用、循环、兜底规则和 DNS |
-| `python -m my_clash build` | 生成 INI、DNS、161 份规则列表及带 SHA-256 的目录 |
+| `python -m my_clash build` | 生成 INI、DNS、40 份被引用的规则列表及带 SHA-256 的目录 |
 | `python -m my_clash build --check` | 只检查产物差异，有差异返回非零退出码 |
 | `python -m my_clash stats` | 查看 JSON 统计 |
 | `python -m my_clash serve` | 提供本机转换配置 |
-| `python -m my_clash check-sources` | 显式联网检查外部规则是否可读取及解析 |
+| `python scripts/update_acl4ssr.py --commit <完整 SHA>` | 显式更新 23 份 ACL4SSR 规则到指定上游提交 |
 
-普通生成、校验和测试均不访问网络。外部规则仍保留原仓库的 ACL4SSR 动态来源；构建可重复不代表远端规则内容被锁定。`check-sources` 不自动修改或同步规则。
+普通生成、校验、转换和测试均不需要从 ACL4SSR 下载规则。23 份 ACL4SSR 规则锁定到 `settings/acl4ssr.yaml` 记录的同一上游提交，原始文件校验值见 `settings/acl4ssr-lock.json`。更新后运行 `validate`、`build` 和测试，核对变更，再提交源文件、锁定文件与生成产物。
 
 ## 来源
 
-原有规则和来源注释保留在 `rules/`，包括 ACL4SSR 及其他作者的贡献；具体出处以每份规则的注释为准。详见 [来源说明](NOTICE.md)。
+被引用的规则及来源注释保留在 `rules/`；未引用的列表已移除。ACL4SSR 的许可证副本位于 `third_party/`。详见 [来源说明](NOTICE.md)。

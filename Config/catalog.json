@@ -1,11 +1,11 @@
 {
   "summary": {
-    "rule_files": 161,
-    "rules": 59458,
-    "duplicates_removed": 18,
+    "rule_files": 40,
+    "rules": 55305,
+    "duplicates_removed": 126,
     "groups": 27,
     "routes": 42,
-    "external_sources": 23
+    "external_sources": 0
   },
   "files": [
     {
@@ -16,25 +16,18 @@
       "sha256": "c38c1140885cfe9b611f7b7a621b3ff89e2bdf20b354b606f1ef76caf2023a01"
     },
     {
-      "path": "BlockAD/BanEasyList.list",
-      "rules": 21741,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "90f6ed13865cd555422babb60e9f2b2c98a6de7cca3af5aaaf9852d527516b80"
-    },
-    {
       "path": "BlockAD/BanEasyListChina.list",
-      "rules": 7445,
+      "rules": 5050,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "c3ccec49fc943feceba5cec5daaf76e28156dc8c036a834bebc6ba3e881c58ac"
+      "target": "拦截",
+      "sha256": "7979fc3c6ec85d5be74e826ab5f4dc7c4d8192e76c1ec51ab22c20f1dd5c8bc0"
     },
     {
       "path": "BlockAD/BanEasyPrivacy.list",
-      "rules": 14961,
+      "rules": 39852,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "47de32de26d5aa1197961eafd125a7be51fcaa8c08b1c8ef7cfbc4e3c8d2d437"
+      "target": "拦截",
+      "sha256": "ab33e0051af8fd93b8113cad0d9ccd0237b98c4900f475a70aed9b321eafd4ca"
     },
     {
       "path": "BlockAD/BanProgramAD.list",
@@ -44,60 +37,11 @@
       "sha256": "56b5d5b4e9b8cd5a4e94d65182e77f16a798ce6d9d9d2672d9796df24093f738"
     },
     {
-      "path": "Ruleset/360.list",
-      "rules": 8,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a16c9123b83f175a1707fcda9fcf18bf0add997ca3139cec13db9a8d44c07b7f"
-    },
-    {
-      "path": "Ruleset/4399.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9e958e4430cb8fef7044ba8ef7669244d4e2618c11ae771fdb13a2588e96d8aa"
-    },
-    {
-      "path": "Ruleset/58.list",
-      "rules": 1,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "8633683b6430551f6d2da6948de4b1fbcca636c09180fa8b3b212b2b7e23e56c"
-    },
-    {
-      "path": "Ruleset/ABC.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9d55994f8a6bb7b4e03dd2202cba8ce598ec88a245fd38932898c5495ae5739d"
-    },
-    {
-      "path": "Ruleset/AbemaTV.list",
-      "rules": 9,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "7e21bab7a3034db08b263574060503be8379f47eb850ae59c81baeb40838622a"
-    },
-    {
-      "path": "Ruleset/AccelerateDirectSites.list",
-      "rules": 239,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "2bd4928971497fc58ba996efc0469458f3cc0a395908f79956749bac6bc16bda"
-    },
-    {
       "path": "Ruleset/Adobe.list",
       "rules": 33,
       "duplicates_removed": 0,
       "target": "Adobe",
       "sha256": "959e0c018db0a78db12e427b5b5930e7a666a2d26e5ebae53609f592d55f61dc"
-    },
-    {
-      "path": "Ruleset/AdobeBan.list",
-      "rules": 2144,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "b399f13b9ac44cb6e7b86c87db4078c8f2fd05e7a8dc748b377c39be0690fade"
     },
     {
       "path": "Ruleset/Aitidi.list",
@@ -107,94 +51,24 @@
       "sha256": "4f4ed1f8174a71b80c0fd77a26f2ff6c8d9677a41181ef0c61a476db2a8f52d2"
     },
     {
-      "path": "Ruleset/Alibaba.list",
-      "rules": 36,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "7fb7092d795482d61bfd2fc2018cd3c6c4ca806a1668546261c4ce00fed39721"
-    },
-    {
-      "path": "Ruleset/All4.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "fc504f0c6c3618f75ec64724faaffa38b91959bd069f8842198216a58b5d80fe"
-    },
-    {
-      "path": "Ruleset/Amazon.list",
-      "rules": 38,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "b7f277d0cbaa67d19733c305d0c5ff5a90fd0587089fccb6170cf2ea634ff47d"
-    },
-    {
-      "path": "Ruleset/AmazonIp.list",
-      "rules": 1334,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "f60e16655336685ca346ee0d91707cd3034ee5e30430f1abbdebbc87fc95194b"
-    },
-    {
       "path": "Ruleset/Apple.list",
-      "rules": 28,
+      "rules": 29,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "e52453b08e1310127bcd9be3d04590eb044350e420c1a1801b86cf21f53deed2"
-    },
-    {
-      "path": "Ruleset/AppleNews.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "36e766fc8d1b98ac767bb1900a396285fe2db985c5e53475f419bdaadce6ae8a"
-    },
-    {
-      "path": "Ruleset/AppleTV.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "4d19106e249071d858533d5117226c2b5e60d7c71c67fbe8607e94fdb616a7f3"
-    },
-    {
-      "path": "Ruleset/BBC.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "5e33f2368bf9602c784c21f89b7029a0be5c25dee24dd7df43bb728444278bae"
-    },
-    {
-      "path": "Ruleset/BBCiPlayer.list",
-      "rules": 15,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "b96de79e559d3949cfe449c6a3959602d3cbda147aedd92b0af112d47fe013fe"
-    },
-    {
-      "path": "Ruleset/Bahamut.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a7e8d79b8842b248150699630ac31ba7d3ba6a9de863f0c94956ed0a230b5ff0"
-    },
-    {
-      "path": "Ruleset/Baidu.list",
-      "rules": 12,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "af4e99281707b76ce161a6e47c0a45be49b152adabef910fd1f5f0156ce21348"
+      "target": "Apple",
+      "sha256": "f4a2b36feef37a070c4ff3d63a9cb4382fcab6a966fc945446d986b166155c38"
     },
     {
       "path": "Ruleset/Bilibili.list",
-      "rules": 21,
+      "rules": 20,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "52e7dc736fa47e94df8a350e328c8f9ee78ae88e1ecd03d754724f7d5db173bb"
+      "target": "直连",
+      "sha256": "58f61f47982705531f3e95f005d3087aeaec6195e93fbe62f5a92a6e6b3c0fab"
     },
     {
       "path": "Ruleset/BilibiliHMT.list",
       "rules": 21,
       "duplicates_removed": 0,
-      "target": null,
+      "target": "直连",
       "sha256": "7df8d575e8b1640b6d7cd84f220b245dacf3ac42a07c92a886b58e352739fc41"
     },
     {
@@ -205,69 +79,6 @@
       "sha256": "f42125a5c8d78b758121775f9b31f3a829a9db1a938ea6c953c420436e87b138"
     },
     {
-      "path": "Ruleset/Blizzard.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "94e9553ea84f98052f2f9bf9720bffb86acc1a5de1d1bd504803c63424053bb5"
-    },
-    {
-      "path": "Ruleset/ByteDance.list",
-      "rules": 43,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "4a6ddcaf3f6ded79de0b236be29889fda7832c120b64d4917b03ce9bd7075cac"
-    },
-    {
-      "path": "Ruleset/CCTV.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "87c3436e8cd87dc7ae5c161a61cada5dbef0ed838f0be54de4bc3e3dd9ccd77e"
-    },
-    {
-      "path": "Ruleset/CN.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "42d5b3239b95d780301f0b41dea2afa25696ac2883c6d9265cae0fbb896c7304"
-    },
-    {
-      "path": "Ruleset/ChinaNet.list",
-      "rules": 1,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "755f1c854acaa8c0c98e8ea7b1217f8dd236284cee2b237cbd94e0c55f12c4a2"
-    },
-    {
-      "path": "Ruleset/DAZN.list",
-      "rules": 12,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a4613ed5cd565e8f2dd0d2f49fd6f82e97cad1b1893dcdf2a1de2209e315dcfb"
-    },
-    {
-      "path": "Ruleset/Deezer.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "66f65dd3d3acb3f9fb60dff643431317c6aa42e8610c3980ce8f1bc1e3ca45ee"
-    },
-    {
-      "path": "Ruleset/Developer.list",
-      "rules": 19,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "2af8243c98ecfda32ada42bd0fe09235afe35bf48bec5a3031bdce3b2e310ffb"
-    },
-    {
-      "path": "Ruleset/DiDi.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "03cf8a7cfd26b3cd0252cbda1839f22b83565c08e7c05a95982f21cb19a8e1d8"
-    },
-    {
       "path": "Ruleset/Direct/Boghma.list",
       "rules": 2,
       "duplicates_removed": 0,
@@ -276,24 +87,24 @@
     },
     {
       "path": "Ruleset/Direct/ChinaCompanyIp.list",
-      "rules": 221,
+      "rules": 208,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "335d34a8e86005dc85a4829b7bf59f1290e5a427f9eebbddd062d8cc66572848"
+      "target": "直连",
+      "sha256": "f265df1c361f4f18eb50bc8da4e6464a49fd441292bbac7c581fc57176d38fe4"
     },
     {
       "path": "Ruleset/Direct/ChinaDomain.list",
-      "rules": 624,
+      "rules": 634,
       "duplicates_removed": 1,
-      "target": null,
-      "sha256": "e0f4b2faa11226a89b7b257fa30d5c7ab42104922b5a8c277623c5fcf904279d"
+      "target": "直连",
+      "sha256": "48a2330e45ac30eb1228c080c260dd8f0aed7ab3059bb92452bbd0e3971c5d68"
     },
     {
-      "path": "Ruleset/Direct/ChinaIp.list",
-      "rules": 6291,
+      "path": "Ruleset/Direct/ChinaMedia.list",
+      "rules": 38,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d90373f7dcdee8d8ba5d7aae2bf35af2c42263e17e9dc06f8eb891ac145ab4ad"
+      "target": "直连",
+      "sha256": "d894aa58ff9d2c3f0c9d74ca6b641c9e83acac374953efdcf0da5c4873663c50"
     },
     {
       "path": "Ruleset/Direct/Dingtalk.list",
@@ -304,10 +115,10 @@
     },
     {
       "path": "Ruleset/Direct/Download.list",
-      "rules": 21,
+      "rules": 22,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "375eb8cddb0f372bad1f0204ae8840cdd402bb09296efd4f53ccc78dc04b3bea"
+      "target": "直连",
+      "sha256": "2134cb74d4141e20b1a68ddd2b6870b5b45b93ffee2b2566441655cf940cb29f"
     },
     {
       "path": "Ruleset/Direct/Linuxdo.list",
@@ -318,17 +129,17 @@
     },
     {
       "path": "Ruleset/Direct/LocalAreaNetwork.list",
-      "rules": 35,
+      "rules": 37,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d66e49b00505bddd5167638032c17d18ae83d4f96e1e58bcae702237c9898632"
+      "target": "直连",
+      "sha256": "2c6050d44e3b59e28255aff1d8f9378de7956652fdb13be76becbf1b55f139f6"
     },
     {
       "path": "Ruleset/Direct/UnBan.list",
-      "rules": 16,
+      "rules": 31,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d17233bb862668d4909f2810e348d5d7d64be62186cb5fe9522e6fcbf5489b65"
+      "target": "直连",
+      "sha256": "a04e6d98c291b99f4e4081d57e2fb8bf3bb448daff1107d6e12f3dd73375f9aa"
     },
     {
       "path": "Ruleset/Direct/wolai.list",
@@ -338,74 +149,11 @@
       "sha256": "922259c7fd6a24ace2f31b764ed6a61d9019af59542bbd9cea551c597f590324"
     },
     {
-      "path": "Ruleset/Discord.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "10945e5bd766ecb8cde533b0aa0209f7597b7660b9e254646385d3b9675e7d8a"
-    },
-    {
-      "path": "Ruleset/DiscoveryPlus.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "6c5bd3bf143013267746b2518499a563fb64f18a5b21efa4aebd9d216119a15b"
-    },
-    {
-      "path": "Ruleset/DisneyPlus.list",
-      "rules": 22,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "6d8054a7bf02325940197bb8505a70bd567c1a724fb5fc72795eb585f08f8dd6"
-    },
-    {
-      "path": "Ruleset/Dmm.list",
-      "rules": 14,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "8895681080a3e4b73e1c6baf998919a1a5957cdeb61f081a29128f7f95e66215"
-    },
-    {
-      "path": "Ruleset/Douyu.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "47e0a0c8a4832288480ce6f7d5266eaa7b640ec023ef8cd907f4c84ca5617c19"
-    },
-    {
-      "path": "Ruleset/Download.list",
-      "rules": 21,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "85d2434644e95da9f97243931e12866f2aec3ee83aa0ca58184bec3549fadfdc"
-    },
-    {
-      "path": "Ruleset/Dubox.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "17afdef519aa9c58b6c2196da77cd6dda875701c20b04d618fd53791ff1448cb"
-    },
-    {
       "path": "Ruleset/EDU.list",
       "rules": 1,
       "duplicates_removed": 0,
       "target": "EDU",
       "sha256": "de344d4895a0609c9a3bac28d96c71bf1a981a82fe6c7aa81148d49092fd0cd0"
-    },
-    {
-      "path": "Ruleset/EHGallery.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "1126a11dad39efce76b9d6db5801fe76636b24350c3668c97ce984fd482e2fd7"
-    },
-    {
-      "path": "Ruleset/EncoreTVB.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "94d8d0b3ffd98280ff4bf5a9b579a41141f7995e1482d5c75754f6aec87703bb"
     },
     {
       "path": "Ruleset/Epic.list",
@@ -415,27 +163,6 @@
       "sha256": "f021984c3623d2e4dfc86d2ffb9d5db232dffb23fbd70d1fd8c10e5dafb0ed22"
     },
     {
-      "path": "Ruleset/F1.list",
-      "rules": 39,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "5f4df8ec5ff36546d24318f0d5b41d4fa5dfac15c2752bb9218cb8bce5bfecad"
-    },
-    {
-      "path": "Ruleset/Facebook.list",
-      "rules": 21,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "b19fed0bcb45eab7d65241c850f738def6a9791c3463dd24f643c7c5bfafd25c"
-    },
-    {
-      "path": "Ruleset/FoxNow.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "1b49098bf8d7f1d00ae6b0355bb8b9d1a4bf547151f6c024d2bb3bd4e81ae08b"
-    },
-    {
       "path": "Ruleset/GameDownload.list",
       "rules": 20,
       "duplicates_removed": 0,
@@ -443,193 +170,39 @@
       "sha256": "cc65741cec0873866afa99e1a49bc1a38ef650d5a30839877e754393a8d5b128"
     },
     {
-      "path": "Ruleset/Github.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "c5c47c9311a58aa280ec17881d72efafe76a19c9cd345ca3c49bbffd7c8f3785"
-    },
-    {
       "path": "Ruleset/Google.list",
-      "rules": 24,
+      "rules": 25,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "c70039bac4e737d983ca4f7fe777c7ea04bf11b62127d2447c141553eba42e7d"
+      "target": "Google",
+      "sha256": "a5265fb806b5e1addd1a00391db19d5bbf60e8d7e1a6b92ae151aae864aaa47a"
     },
     {
       "path": "Ruleset/GoogleCN.list",
-      "rules": 29,
+      "rules": 48,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d7973eba74a321632d1f3529f64be4de66d144c7f097823b25879aa9d82a83e2"
+      "target": "Google",
+      "sha256": "ee72fc2b58b42e51a2fb286bbd81be849eaf69ca6ae977a03e4fa420a8cceb96"
     },
     {
       "path": "Ruleset/GoogleCNProxyIP.list",
       "rules": 18,
       "duplicates_removed": 0,
-      "target": null,
+      "target": "Google",
       "sha256": "e07ae863f162e2f2f24ac75ddac62e0d34a9ecb517576bb37db6cc59e013e269"
     },
     {
       "path": "Ruleset/GoogleEarth.list",
       "rules": 16,
       "duplicates_removed": 0,
-      "target": null,
+      "target": "Google",
       "sha256": "823830cb921418e9693c248134572b386f10d243babbaa62902937d2b0315d83"
     },
     {
       "path": "Ruleset/GoogleFCM.list",
-      "rules": 35,
+      "rules": 44,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d73f6c8a2760594f247da22e7fc10003bcad42f405b96cd091cbc099bc964fd9"
-    },
-    {
-      "path": "Ruleset/Googleapis.list",
-      "rules": 1,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "31fef12d0b57f28097f6111a5ab39fc263eeb7c2a6e677d6eb738956be35047d"
-    },
-    {
-      "path": "Ruleset/HBO.list",
-      "rules": 7,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "506b9ca515e657f0a2428d711da37a8343ff28d31a76802b93e68f0a139239f3"
-    },
-    {
-      "path": "Ruleset/HBO_GO_HKG.list",
-      "rules": 21,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "06039dc6717ba3a7c9262f2597c15664e3ef341e4cacf46b2c9b7439744ef31a"
-    },
-    {
-      "path": "Ruleset/HWTV.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9a305f19bff50c2f22975acf4b93576a8bb0149eb3cbf2401a7b886eef2cdfb2"
-    },
-    {
-      "path": "Ruleset/HuaWei.list",
-      "rules": 10,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "8eddf46253d713406534b5e2250425af9763c206f23a3fc8dd427c0998d2ba36"
-    },
-    {
-      "path": "Ruleset/Hulu.list",
-      "rules": 7,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "b22e0d94317ee485e2ef9fb4c3a89fcdf9dbe529691728ca3980c01e6c17cc9c"
-    },
-    {
-      "path": "Ruleset/HuluJapan.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a4d5c74b857a9812def4831583e32e8a59e182a59ed8cffceb03bae91712146f"
-    },
-    {
-      "path": "Ruleset/ITV.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "ff0b39fd72b091c7f364a05f83b83b26463232682f7e0615349c668132323b49"
-    },
-    {
-      "path": "Ruleset/Iflytek.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "b9bb1a8bb9c749975a6706a6c7daa831f97557b4a973ad773de54def9cfa86d4"
-    },
-    {
-      "path": "Ruleset/Instagram.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "0c4e8b0f225dc4ccc9582d44f0e7d8b8bfee8d79a0d07f5b24558a49ba755fc6"
-    },
-    {
-      "path": "Ruleset/Iqiyi.list",
-      "rules": 25,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "660dc9ad2068818320586128a5aeb86b546c1a49f51e4b03dd5e7479a6e049dd"
-    },
-    {
-      "path": "Ruleset/IqiyiHMT.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9d2194e0b4b0a351e7b43540786e9ee2b0f136e470d634b1d2615cef08cf2ad7"
-    },
-    {
-      "path": "Ruleset/JD.list",
-      "rules": 8,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "4c4d5c6b23627060c98fa2328274a8f814d562e53701591b779c6bce03491c49"
-    },
-    {
-      "path": "Ruleset/JOOX.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "4cfc3ec7225da873c24951c59b0a44a0eabd90f903d6cd03b333637a8fa018d7"
-    },
-    {
-      "path": "Ruleset/Japonx.list",
-      "rules": 10,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "3bfc572ec922f2c01c1daad897b4698e50cab391f7a77f8580ffa66601e42d22"
-    },
-    {
-      "path": "Ruleset/KKBOX.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d10ca694a81c6dffbb7a0342578f189fba1e9f394d0f739d2e56794d93d9d015"
-    },
-    {
-      "path": "Ruleset/KKTV.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "67b0527ad6eeae1f86089082e883b038d57bfb30757a462a11753074580d4b6b"
-    },
-    {
-      "path": "Ruleset/KakaoTalk.list",
-      "rules": 9,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "4a720d6d305f648699241ecacacdaf885249eef06e21a8e73207646f7688382c"
-    },
-    {
-      "path": "Ruleset/Kingsoft.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "ac6d4d6286380a5b9ebc5f7c535ed8f10ac8b052964f1145d32d4a8f02533248"
-    },
-    {
-      "path": "Ruleset/Kuaishou.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "716ebda9c8a2aceafa0c99f34c0ca2d70fe7aaeb33c8444781654f82747f37d0"
-    },
-    {
-      "path": "Ruleset/LeTV.list",
-      "rules": 1,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "c4b041f3396382ba1ed8f4b8be1b0f5821685a9b194bd876ec8209f88141cf94"
+      "target": "Google",
+      "sha256": "5f68b47c269a274376a30c18bec319c3fb51a00953e924073646801d3d53436e"
     },
     {
       "path": "Ruleset/Lenovo.list",
@@ -639,62 +212,6 @@
       "sha256": "c3fb0dcde67e39f9f3ed53d7ab52b97d4d04baa1715b154661e76e7045d50bf3"
     },
     {
-      "path": "Ruleset/LiTV.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "b6293a6dffab8de466fc15b3a8885a7a261360a11dfb7a31c64731570093eccc"
-    },
-    {
-      "path": "Ruleset/Line.list",
-      "rules": 15,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "35175b503eeb266b01cc2bd0bff6160354879aceb93f3f92cdfe04062c95df4c"
-    },
-    {
-      "path": "Ruleset/LineTV.list",
-      "rules": 6,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "1c6804532d9a56226167b19304a9d131a4fd09ab3f3c526439a21f1880c82dd8"
-    },
-    {
-      "path": "Ruleset/MGTVTV.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "69f0d2850cf4056e9729d4cd8c1a8e473e397e84ba90249c9e5fcd08d42398dc"
-    },
-    {
-      "path": "Ruleset/MI.list",
-      "rules": 7,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "65391c5fb42846ed134d012a192909b45bcd8843f3950b5f79e97da68850fa86"
-    },
-    {
-      "path": "Ruleset/MOO.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9b3bee8f7482c2ec47e08f6cffcdd9a1e338e3a19652d9e0f2c6388335dd50d3"
-    },
-    {
-      "path": "Ruleset/Marketing.list",
-      "rules": 56,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "447558d978e030ac90c846caaabe62b871be19618f49340461d697ca37a43f1b"
-    },
-    {
-      "path": "Ruleset/Meitu.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9de551b8c20b5c2b8c4a97d3d11b759cf3f3b0169643f99a99f442a4eccc4f95"
-    },
-    {
       "path": "Ruleset/Microsoft.list",
       "rules": 89,
       "duplicates_removed": 0,
@@ -702,193 +219,32 @@
       "sha256": "c68dd4b52f29c2caecfac5da9aeb9706b5d210475a9ae57c187f667e26bb3ddb"
     },
     {
-      "path": "Ruleset/My5.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "ef25bc5bfd43e66a4918b38316812d56d4d3231f78b102c490fc969a3ae426b0"
-    },
-    {
-      "path": "Ruleset/MyTVSuper.list",
-      "rules": 7,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "e90ff818bc7ef7d65caaa34ab29cd14d5491b32117c5ffb9de0ac0c64cad04b8"
-    },
-    {
-      "path": "Ruleset/NetEase.list",
-      "rules": 9,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "943cea49c399a724f9397ff247fd2111a24d97ae5a62dba7e37e9e57e6b2335a"
-    },
-    {
-      "path": "Ruleset/NetEaseMusic.list",
-      "rules": 37,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "0807d9de635db69b3db18ecad0bc10c6f0c0282043d8aeaa698c9a8c9e965be6"
-    },
-    {
       "path": "Ruleset/Netflix.list",
       "rules": 40,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "bdc8d05c86b1a1e58c061fd2f8e42249f045cb22e4560a55699f0ad64ef145cb"
-    },
-    {
-      "path": "Ruleset/NetflixIP.list",
-      "rules": 863,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "4c08b7a5ad2a5b869b97808961377bfbdc6570e01516e09ef42f8943f8616d46"
-    },
-    {
-      "path": "Ruleset/Niconico.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "82edd62ceb15cc62383fd2c2914be7d859038855a32c94f10f2ec3259fb8e18a"
-    },
-    {
-      "path": "Ruleset/Nintendo.list",
-      "rules": 15,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "c21a6cae818de2f268b42e8a44f83399fe109d6b9ff8a21716173dbffd3d0469"
-    },
-    {
-      "path": "Ruleset/NivodTV.list",
-      "rules": 11,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "1f2897aa3ebb6bfe8ef38c633cf95aed6dce7b75e14a5850bf108f097cc5eead"
-    },
-    {
-      "path": "Ruleset/Olevod.list",
-      "rules": 9,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a58bbc9ff6b6437b7b1658567cc209ba5cfd64c00dc3a1f422040f451ba9073b"
-    },
-    {
-      "path": "Ruleset/OneDrive.list",
-      "rules": 18,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "4d345697be0add03fa8d481f42ed3e82a452dbf6a3b3b72d943071d62df9ad5a"
+      "target": "Netflix",
+      "sha256": "9fac48883f51c73dc7d2affd7e0e000e85008026d37a341c2ab9ee11b187c07f"
     },
     {
       "path": "Ruleset/OpenAi.list",
-      "rules": 11,
+      "rules": 17,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "5895fb35b31904b7aaeb7633ec6167294b6695624023d904a0823e4132aea45f"
+      "target": "OpenAI",
+      "sha256": "6750afdf2725f4b0b8f4d808624dbf220d23339b9c051c9977006c2935c0fbc3"
     },
     {
-      "path": "Ruleset/Origin.list",
-      "rules": 7,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a0c0e0f647f8e0f331731a7cbb192834baca715bce4abe42535392c8c6491fed"
+      "path": "Ruleset/ProxyGFWlist.list",
+      "rules": 6883,
+      "duplicates_removed": 103,
+      "target": "加速",
+      "sha256": "7ffa532e850463a61e71d92c42e7ffcc707b39e82ee3f1b6c76cf1c2e7ffc9f2"
     },
     {
-      "path": "Ruleset/PBS.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a2b08d34f8651496472393ed8cea959a19b7b8e76be0c279df1cb94ef6736a96"
-    },
-    {
-      "path": "Ruleset/PDD.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "65341a6fe45f2e4d43b2005ee12cfc3a2fd1d68ba3b6e448c219622f1d7eb75e"
-    },
-    {
-      "path": "Ruleset/PPTVPPLive.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "2485cd5d9c9a49cb38e54ef1bc52a0d16221468fbc77cd0a0bf8371cb10014fe"
-    },
-    {
-      "path": "Ruleset/Pandora.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "8b8809684fb7c63437100ad2acaf3e8c953101c8fdcb5913e55fe23b61c77316"
-    },
-    {
-      "path": "Ruleset/Pixiv.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d9ec82cc0ea4fb3845300150e9b38b06f500991437d9dbe5340422da7cd56140"
-    },
-    {
-      "path": "Ruleset/Porn.list",
-      "rules": 23,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "994f754a49a8d8759455fc1609076a817aa9db3d9e63c3800eacc4808c05a496"
-    },
-    {
-      "path": "Ruleset/Pornhub.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "87021cdc920c5b9d7d05bf347776827758bf65f89889cd42987df3fde7aa0e60"
-    },
-    {
-      "path": "Ruleset/PrivateTracker.list",
-      "rules": 116,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "7e2b7660707f336a64f7942a9354f28397eee9da0e6f2ae03a113fbd1680e07b"
-    },
-    {
-      "path": "Ruleset/PublicDirectCDN.list",
-      "rules": 5,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "8e3388556b3e5aacc9db9e53337e560729e614ef3dd29c42af528704519c4127"
-    },
-    {
-      "path": "Ruleset/Qobuz.list",
-      "rules": 1,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "cd60659c92e563770eeb52fdc0f5784ffaa061c17f39831998e5e19121bbdb88"
-    },
-    {
-      "path": "Ruleset/Reddit.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "ca3d581d7e96b32e6f3b0cf34eee36f193d8602756673ea5e8606b749c36b162"
-    },
-    {
-      "path": "Ruleset/RemoteDesktop.list",
-      "rules": 9,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "da24ae8bb3b2d6401307e855e17ceb3148a13c456cd0c8886fe414feec27622f"
-    },
-    {
-      "path": "Ruleset/Scholar.list",
-      "rules": 82,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "02f0ccfbc39e982b73a783c3b5feb013b4be059252e757ae9b8148ca67cdefbe"
-    },
-    {
-      "path": "Ruleset/Sina.list",
-      "rules": 14,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "78ad0d53ece48fb912905daad1055d8ed2f17b9a3359ef4600c82151d95db0a9"
+      "path": "Ruleset/ProxyMedia.list",
+      "rules": 357,
+      "duplicates_removed": 15,
+      "target": "加速",
+      "sha256": "b0e581950686dae064f5541d13f56e5873d94d9d2738b10c6a1988e22fe2fbff"
     },
     {
       "path": "Ruleset/Sketchfab.list",
@@ -898,172 +254,25 @@
       "sha256": "569e5f9d590f81b365b650ece3b33616dc0d9064b496df44d8a384cfaad046a7"
     },
     {
-      "path": "Ruleset/SohuSogo.list",
-      "rules": 10,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "5449d02585cd7d6b6f14b11c9d1ed838b6cdd49b0a5d13fcecf4a1607bb010d5"
-    },
-    {
-      "path": "Ruleset/Sony.list",
-      "rules": 5,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "1b72b722fda4834e28229f3763e038f14f325c23d5d7f5b3f4768ab7678a5f5b"
-    },
-    {
-      "path": "Ruleset/SoundCloud.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "1cf12d6f21ee83a7a97f68a1ede40ab942783be8b452d13e8565ae370f7e49e4"
-    },
-    {
-      "path": "Ruleset/Spark.list",
-      "rules": 5,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "5684d0acef5062d21cb92276d95736c9d5dd9617fa10b6bbda0ca965f7bb92ed"
-    },
-    {
-      "path": "Ruleset/Spotify.list",
-      "rules": 9,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9f5b09bcf103c85a4f02e3840817f75154c09bcd85d0455ce01c1d62e1669870"
-    },
-    {
       "path": "Ruleset/Steam.list",
-      "rules": 19,
+      "rules": 18,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "c392075a27d28057c9cefbb25ed15a3257cc5f549cc44196d17cda0362566b16"
+      "target": "Steam",
+      "sha256": "d1174bb006086054861affc39e6888af6fdaa5281f7478cc38e602ccc84ab52e"
     },
     {
       "path": "Ruleset/SteamCN.list",
       "rules": 16,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "dc11990b4da09800a4ef3b1387d111e43879eb26b621885bcf806382b6e084b1"
-    },
-    {
-      "path": "Ruleset/TIDAL.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "1aecf00ce2ec3df898dbc40846bf61f39d243af13ab30bbd9039e8ebea65815b"
-    },
-    {
-      "path": "Ruleset/TaiWanGood.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "7b1e8e3c16c1d2444b15412942d30371f2e74ee53a8774ab21960e6805ced81d"
-    },
-    {
-      "path": "Ruleset/TapTap.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d8c91bcbfcc97bb9e46e0771dc92908ae88a998ce3269fefc2933810fdfea0ed"
-    },
-    {
-      "path": "Ruleset/TeamViewer.list",
-      "rules": 9,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "f442b40c930334be1e5d43d11ecba4c2dc7b3a678ea7fcf21855f5b80da173b5"
+      "target": "直连",
+      "sha256": "bbe004a668ac4b0da14c34f074bfa87a96bfeb210cb39c2b3fa369f14c2e2fbf"
     },
     {
       "path": "Ruleset/Telegram.list",
       "rules": 13,
       "duplicates_removed": 0,
-      "target": null,
-      "sha256": "fd0e289f1cec6f0e9ac128825f7aec3684a4b67bb096c3c1164eb0cb516447c6"
-    },
-    {
-      "path": "Ruleset/Tencent.list",
-      "rules": 19,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "ced8b48149425126a556e403bf4ad58d5ee10db36aa7ef94c9f371d6a0f4c4ca"
-    },
-    {
-      "path": "Ruleset/TencentLolm.list",
-      "rules": 3,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "d49b99e291c984e7984459ac2ff6fc69cbd78682b53b1dd7f1b4bea7dc1dc1c4"
-    },
-    {
-      "path": "Ruleset/TencentVideo.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "68e861fba5e8e53ce4e8c1aad69d0790cde53bff269dbe3814e6dd950c576d37"
-    },
-    {
-      "path": "Ruleset/TeraBox.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "fd38ea6e97b7594d39b266adbbc0a67c51b33e44ba641472f3a6cb2f2ecca336"
-    },
-    {
-      "path": "Ruleset/TikTok.list",
-      "rules": 22,
-      "duplicates_removed": 10,
-      "target": null,
-      "sha256": "494c0646e9ec29027b17a057f90f5e927d8da33ca87086405f9d3cbf34162c47"
-    },
-    {
-      "path": "Ruleset/TopBlockedSites.list",
-      "rules": 109,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "90eb1c3791cbb90954d845dc8c4ec0bd40447f02842aeae03aca34594b2322ff"
-    },
-    {
-      "path": "Ruleset/Twitch.list",
-      "rules": 7,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "cca2e49ae89be324352472d715d18dbffbd1818d429fb73a4828e1d973a47f16"
-    },
-    {
-      "path": "Ruleset/Twitter.list",
-      "rules": 12,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "a041bc747ed983891a02a10cb1d9cbb836f48e6c7bf7f26efefea45ddd19f969"
-    },
-    {
-      "path": "Ruleset/VikACG.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "f6dd3c0e72c2480148ab95e666d7bbcead571fbbd62da9ef81508d02ea3f5bb6"
-    },
-    {
-      "path": "Ruleset/Vip.list",
-      "rules": 4,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "863d66213dcdaa9a4fa309e7b1c474baf101f1837c2178204ad79d7bb5d92e3e"
-    },
-    {
-      "path": "Ruleset/ViuTV.list",
-      "rules": 16,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "0d78be72d00de96f542a0087e7167d7970132efdd66fac72e7d342595b6e52e2"
-    },
-    {
-      "path": "Ruleset/Wechat.list",
-      "rules": 23,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "86ecfb3402b99377b6602d62b06fba07ad7294694880bdd4f9a1f494d80da1ca"
+      "target": "Telegram",
+      "sha256": "90737dda21d4d2bd3869b007213a793cde8cf6fa90641d5d07171ae2ed80af44"
     },
     {
       "path": "Ruleset/WeiboAD.list",
@@ -1073,67 +282,11 @@
       "sha256": "bd9d9d84cf51245a5f7c4a84ca2371495a3c9eb682961892cf0603a30345d856"
     },
     {
-      "path": "Ruleset/Whatsapp.list",
-      "rules": 16,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "5db372896e3a37e4f4ed3a5b4d814f08251d1db55476f14e92ec16523f6f4f4e"
-    },
-    {
-      "path": "Ruleset/Wikipedia.list",
-      "rules": 12,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "ebd6b96a459876ba7f88e9cd96edde50abaec29ee5b8f3a9320ab4a645d79bb1"
-    },
-    {
-      "path": "Ruleset/Xbox.list",
-      "rules": 7,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "f49cbe156123878486a9e54e7f8d1ba2568090401ed3eb6e9210a12a200f4409"
-    },
-    {
       "path": "Ruleset/Ximalaya.list",
       "rules": 3,
       "duplicates_removed": 0,
       "target": "直连",
       "sha256": "63c98fc4dddbc6f540ff9e0138475b1403a13d79f7696357b64ff0dfff74814b"
-    },
-    {
-      "path": "Ruleset/Xunlei.list",
-      "rules": 8,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "0ef9f2d7c824112d35cc1c17b2198aef7107db2fbf92ef0d4c21452b975c66e3"
-    },
-    {
-      "path": "Ruleset/YYeTs.list",
-      "rules": 15,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9e541a37b5a082490bb8abd32e931c8585d7e8fa513b3c6829485bbfb949dc49"
-    },
-    {
-      "path": "Ruleset/YouTube.list",
-      "rules": 17,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "9431bb17b3ce7b7ecfd3c511785b5851780e5b2daee7bcea2517c7b96fd5f9ad"
-    },
-    {
-      "path": "Ruleset/YouTubeMusic.list",
-      "rules": 5,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "2c459000faecd42292e46c8948a809d546dd4f2a16fdccb0372637ef723f51d6"
-    },
-    {
-      "path": "Ruleset/Youku.list",
-      "rules": 2,
-      "duplicates_removed": 0,
-      "target": null,
-      "sha256": "eaed9922321f7ee5b7065151887127077074bfed59ba0e409e22401f3f2368e9"
     }
   ]
 }

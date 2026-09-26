@@ -21,3 +21,4 @@ PROCESS-NAME,DownloadService.exe
 URL-REGEX,(.+\.|^)(360|so)\.(cn|com)
 PROCESS-NAME,Weiyun.exe
 PROCESS-NAME,baidunetdisk.exe
+URL-REGEX,assets\d+\.xboxlive\.(com|cn)

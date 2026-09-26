@@ -9,7 +9,6 @@ import sys
 
 from .build import build
 from .model import Project
-from .network import check_sources
 from .rules import ConfigError
 
 
@@ -25,8 +24,6 @@ def parser() -> argparse.ArgumentParser:
     compiler.add_argument("--check", action="store_true", help="检查产物是否过期，不写文件")
     server = commands.add_parser("serve", help="构建并在回环地址提供配置，供本机 subconverter 使用")
     server.add_argument("--port", type=int, default=8000)
-    network = commands.add_parser("check-sources", help="联网检查所有外部规则地址及内容")
-    network.add_argument("--timeout", type=float, default=15)
     return cli
 
 
@@ -47,12 +44,6 @@ def main(argv: list[str] | None = None) -> int:
                 print("生成产物缺失或过期:\n" + "\n".join(changed), file=sys.stderr)
                 return 1
             print(f"{'检查通过' if args.check else '生成完成'}；变更文件: {len(changed)}")
-        elif args.command == "check-sources":
-            if args.timeout <= 0:
-                raise ConfigError("timeout 必须大于 0")
-            results = check_sources(project, args.timeout)
-            print(json.dumps(results, ensure_ascii=False, indent=2))
-            return int(any(not result["ok"] for result in results))
         elif args.command == "serve":
             if not 1 <= args.port <= 65535:
                 raise ConfigError("port 必须在 1 到 65535 之间")

@@ -29,6 +29,8 @@ class RegressionTests(unittest.TestCase):
 
     def test_route_order_only_changes_documented_broken_and_duplicate_entries(self):
         old = (ROOT / "tests/fixtures/my_config.ini").read_text(encoding="utf-8-sig")
+        manifest = load_yaml(ROOT / "settings/acl4ssr.yaml")
+        imported = {"https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/" + item["source"]: item["file"] for item in manifest["files"]}
         normalized = []
         seen = set()
         for line in old.splitlines():
@@ -41,7 +43,12 @@ class RegressionTests(unittest.TestCase):
             if source in seen:
                 continue
             seen.add(source)
-            normalized.append(line.replace("/Aitidi/My_Clash/main/", "/Aitidi/My_Clash2.0/main/"))
+            if source in imported:
+                target = line.split("=", 1)[1].split(",", 1)[0]
+                line = f"ruleset={target},{self.project.base_url}/{imported[source]}"
+            else:
+                line = line.replace("/Aitidi/My_Clash/main/", "/Aitidi/My_Clash2.0/main/")
+            normalized.append(line)
         new = [line for line in render_ini(self.project, self.project.base_url).splitlines() if line.startswith("ruleset=")]
         self.assertEqual(normalized, new)
 
@@ -50,9 +57,10 @@ class RegressionTests(unittest.TestCase):
         old["fake-ip-filter"] = list(dict.fromkeys(old["fake-ip-filter"]))
         self.assertEqual(old, self.project.dns)
 
-    def test_all_files_preserved_and_valid_after_rendering(self):
-        self.assertEqual(len(self.project.rules), 161)
+    def test_only_referenced_files_remain_and_render_validly(self):
+        self.assertEqual(len(self.project.rules), 40)
         self.assertEqual(list(self.project.rules), sorted(self.project.rules))
+        self.assertEqual(set(self.project.rules), {route["file"] for route in self.project.routes if "file" in route})
         output = render(self.project)
         for name, value in self.project.rules.items():
             with self.subTest(name=name):
@@ -60,8 +68,9 @@ class RegressionTests(unittest.TestCase):
                 self.assertEqual(parsed.rules, value.rules)
                 self.assertEqual(parsed.duplicates, 0)
         catalog = json.loads(output["Config/catalog.json"])
-        self.assertEqual(len(catalog["files"]), 161)
-        self.assertEqual(catalog["summary"]["rules"], 59458)
+        self.assertEqual(len(catalog["files"]), 40)
+        self.assertEqual(catalog["summary"]["rules"], 55305)
+        self.assertEqual(catalog["summary"]["external_sources"], 0)
 
     def test_build_is_deterministic_and_check_does_not_write(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -77,11 +86,28 @@ class RegressionTests(unittest.TestCase):
             self.assertEqual(build(self.project, path, check=True), ["Ruleset/Aitidi.list"])
             self.assertIn("tampered", changed.read_text())
 
-    def test_override_base_url_updates_only_local_rule_references(self):
+    def test_override_base_url_updates_all_rule_references(self):
         output = render_ini(self.project, "http://127.0.0.1:8000")
         self.assertIn("http://127.0.0.1:8000/Ruleset/Aitidi.list", output)
+        self.assertIn("http://127.0.0.1:8000/Ruleset/ProxyGFWlist.list", output)
         self.assertNotIn("githubusercontent.com/Aitidi", output)
-        self.assertIn("githubusercontent.com/ACL4SSR/", output)
+        self.assertNotIn("githubusercontent.com/ACL4SSR/", output)
+
+    def test_vendored_rules_match_locked_upstream_snapshot(self):
+        lock = json.loads((ROOT / "settings/acl4ssr-lock.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(lock["files"]), 23)
+        self.assertTrue((ROOT / "third_party/ACL4SSR-LICENCE").is_file())
+        self.assertEqual({entry["file"] for entry in lock["files"]} <= set(self.project.rules), True)
+
+    def test_lock_rejects_modified_vendored_rule(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            shutil.copytree(ROOT / "settings", root / "settings")
+            shutil.copytree(ROOT / "rules", root / "rules")
+            path = root / "rules/Ruleset/Google.list"
+            path.write_bytes(path.read_bytes() + b"\nDOMAIN,tampered.example\n")
+            with self.assertRaisesRegex(ConfigError, "锁定校验值"):
+                Project(root)
 
     def test_build_refuses_source_directory(self):
         for directory in ("rules", "settings", "tests", ".git"):
@@ -105,6 +131,8 @@ class ValidationTests(unittest.TestCase):
         self.addCleanup(self.folder.cleanup)
         self.root = Path(self.folder.name)
         shutil.copytree(ROOT / "settings", self.root / "settings")
+        (self.root / "settings/acl4ssr.yaml").unlink()
+        (self.root / "settings/acl4ssr-lock.json").unlink()
         self.policy = load_yaml(self.root / "settings/policy.yaml")
         self.policy["routes"] = [{"target": "加速", "file": "Ruleset/Test.list"}, {"target": "漏网之鱼", "rule": "FINAL"}]
         (self.root / "rules/Ruleset").mkdir(parents=True)
@@ -117,6 +145,11 @@ class ValidationTests(unittest.TestCase):
     def test_missing_or_wrong_case_local_file(self):
         self.policy["routes"][0]["file"] = "Ruleset/test.list"
         with self.assertRaisesRegex(ConfigError, "区分大小写"):
+            self.project()
+
+    def test_unused_rule_file_rejected(self):
+        (self.root / "rules/Ruleset/Unused.list").write_text("DOMAIN,unused.example\n", encoding="utf-8")
+        with self.assertRaisesRegex(ConfigError, "未引用"):
             self.project()
 
     def test_route_requires_one_source(self):

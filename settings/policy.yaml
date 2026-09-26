@@ -177,35 +177,35 @@ routes:
 - target: 拦截
   file: BlockAD/BanProgramAD.list
 - target: 拦截
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyPrivacy.list
+  file: BlockAD/BanEasyPrivacy.list
 - target: 拦截
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list
+  file: BlockAD/BanEasyListChina.list
 - target: 拦截
   file: Ruleset/Lenovo.list
 - target: Google
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
+  file: Ruleset/Google.list
 - target: Google
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list
+  file: Ruleset/GoogleCN.list
 - target: Google
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
+  file: Ruleset/GoogleCNProxyIP.list
 - target: Google
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleEarth.list
+  file: Ruleset/GoogleEarth.list
 - target: Google
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+  file: Ruleset/GoogleFCM.list
 - target: Adobe
   file: Ruleset/Adobe.list
 - target: Apple
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+  file: Ruleset/Apple.list
 - target: OpenAI
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list
+  file: Ruleset/OpenAi.list
 - target: Microsoft
   file: Ruleset/Microsoft.list
 - target: Telegram
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+  file: Ruleset/Telegram.list
 - target: Netflix
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list
+  file: Ruleset/Netflix.list
 - target: Steam
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
+  file: Ruleset/Steam.list
 - target: Epic
   file: Ruleset/Epic.list
 - target: EDU
@@ -219,9 +219,9 @@ routes:
 - target: 加速
   file: Ruleset/Sketchfab.list
 - target: 加速
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+  file: Ruleset/ProxyGFWlist.list
 - target: 加速
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+  file: Ruleset/ProxyMedia.list
 - target: 加速
   file: Ruleset/GameDownload.list
 - target: 直连
@@ -229,23 +229,23 @@ routes:
 - target: 直连
   file: Ruleset/Direct/wolai.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+  file: Ruleset/Direct/LocalAreaNetwork.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+  file: Ruleset/Direct/UnBan.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+  file: Ruleset/Direct/ChinaDomain.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+  file: Ruleset/Direct/ChinaCompanyIp.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+  file: Ruleset/Direct/Download.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+  file: Ruleset/SteamCN.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+  file: Ruleset/Direct/ChinaMedia.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list
+  file: Ruleset/BilibiliHMT.list
 - target: 直连
-  url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list
+  file: Ruleset/Bilibili.list
 - target: 直连
   file: Ruleset/Ximalaya.list
 - target: 直连

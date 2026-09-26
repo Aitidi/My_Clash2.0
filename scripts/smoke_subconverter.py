@@ -1,8 +1,8 @@
 """Optional end-to-end check against a running local subconverter.
 
 Run from the repository root after installing the project. Uses synthetic SOCKS5
-nodes; no real subscription or proxy connection is needed. External ACL4SSR rule
-fetches are performed by subconverter and require internet access.
+nodes; no real subscription or proxy connection is needed. All referenced rules
+are served from this repository's generated files.
 """
 
 import argparse

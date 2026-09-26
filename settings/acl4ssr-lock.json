@@ -1,0 +1,145 @@
+{
+  "repository": "https://github.com/ACL4SSR/ACL4SSR",
+  "commit": "46ce840aa8cbfccce071558bfc1ad57704e32219",
+  "license": "CC-BY-SA-4.0",
+  "files": [
+    {
+      "source": "Clash/BanEasyPrivacy.list",
+      "file": "BlockAD/BanEasyPrivacy.list",
+      "sha256": "e8422e996453ad7797461db4a597d4c9e16cc7b4824349d30da85dd8b6e1656c",
+      "rules": 39852
+    },
+    {
+      "source": "Clash/BanEasyListChina.list",
+      "file": "BlockAD/BanEasyListChina.list",
+      "sha256": "dcbc1a18b9723747fc26a3a922c04917b0c15378725035171a502fcf2c2653cf",
+      "rules": 5050
+    },
+    {
+      "source": "Clash/Ruleset/Google.list",
+      "file": "Ruleset/Google.list",
+      "sha256": "16b21eebc7a8ab3c08dcdb0f601b5c0b7b4182f46643a6180dfb9bb6fb83bd61",
+      "rules": 25
+    },
+    {
+      "source": "Clash/Ruleset/GoogleCN.list",
+      "file": "Ruleset/GoogleCN.list",
+      "sha256": "f6321957b557ea4988eb2584a861fedd0e117866c4ff3892283014415898bb08",
+      "rules": 48
+    },
+    {
+      "source": "Clash/Ruleset/GoogleCNProxyIP.list",
+      "file": "Ruleset/GoogleCNProxyIP.list",
+      "sha256": "2404f0bdbcd8f601fff5e3822e14d3726daba3fb8b9ea190ddb24c7d053539d0",
+      "rules": 18
+    },
+    {
+      "source": "Clash/Ruleset/GoogleEarth.list",
+      "file": "Ruleset/GoogleEarth.list",
+      "sha256": "846bda6c3aace0835a2f02fb1b4ddbc54d8b48ea2e621d82c0757456e750b45c",
+      "rules": 16
+    },
+    {
+      "source": "Clash/Ruleset/GoogleFCM.list",
+      "file": "Ruleset/GoogleFCM.list",
+      "sha256": "f115f84bef66a5aa931fd20f23d6914cdfdfe3d07795d65549d578b91a0f0c48",
+      "rules": 44
+    },
+    {
+      "source": "Clash/Apple.list",
+      "file": "Ruleset/Apple.list",
+      "sha256": "7b2e60cd0bf3c4bfb1369890d39cc3783bdfcb016089b78acee0ff6f0d4e51c5",
+      "rules": 29
+    },
+    {
+      "source": "Clash/Ruleset/OpenAi.list",
+      "file": "Ruleset/OpenAi.list",
+      "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
+      "rules": 17
+    },
+    {
+      "source": "Clash/Telegram.list",
+      "file": "Ruleset/Telegram.list",
+      "sha256": "483f613b31a1c054ddfffa6584b449f4447944ea58b8c1fc06b67eb13c09db89",
+      "rules": 13
+    },
+    {
+      "source": "Clash/Ruleset/Netflix.list",
+      "file": "Ruleset/Netflix.list",
+      "sha256": "eb09e16b5aa228230e5770bfc04f2eb25261454a0b2e16f05fd3e9d2ab5202b5",
+      "rules": 40
+    },
+    {
+      "source": "Clash/Ruleset/Steam.list",
+      "file": "Ruleset/Steam.list",
+      "sha256": "0abad0ae490ec9b7bf0cf880f83c5229949b14cc5df448c00a0516225a16b011",
+      "rules": 18
+    },
+    {
+      "source": "Clash/ProxyGFWlist.list",
+      "file": "Ruleset/ProxyGFWlist.list",
+      "sha256": "72d5f97cb3adedd7ef632962effda4aa3b9953da20427cd6050d55d1184de5ea",
+      "rules": 6883
+    },
+    {
+      "source": "Clash/ProxyMedia.list",
+      "file": "Ruleset/ProxyMedia.list",
+      "sha256": "fe886c6f537c0214446018f3f64291db8d500c58877d180d2a21a78c19c499e1",
+      "rules": 357
+    },
+    {
+      "source": "Clash/LocalAreaNetwork.list",
+      "file": "Ruleset/Direct/LocalAreaNetwork.list",
+      "sha256": "0789504d97d8f5b14513c529c61c06f4f862c5cfd20f7cb30bbcd38357e54468",
+      "rules": 37
+    },
+    {
+      "source": "Clash/UnBan.list",
+      "file": "Ruleset/Direct/UnBan.list",
+      "sha256": "016837560f1f0eeb576f81600c95b547bd82e27ba27a175a3b5010de9bd18ffa",
+      "rules": 31
+    },
+    {
+      "source": "Clash/ChinaDomain.list",
+      "file": "Ruleset/Direct/ChinaDomain.list",
+      "sha256": "362edd1f605742b360eaf138f151d7eea96cc17f20ef12da73acbfb80c350e08",
+      "rules": 634
+    },
+    {
+      "source": "Clash/ChinaCompanyIp.list",
+      "file": "Ruleset/Direct/ChinaCompanyIp.list",
+      "sha256": "cbc63e3daee0c0467558394ce0cfdd342f28e6c0f903bc4b35b6a5f06279d160",
+      "rules": 208
+    },
+    {
+      "source": "Clash/Download.list",
+      "file": "Ruleset/Direct/Download.list",
+      "sha256": "62b72d16b8f2bcbc80eb2c7af35dc03b31c4d82e732af6d227c2a311f04bdadc",
+      "rules": 22
+    },
+    {
+      "source": "Clash/Ruleset/SteamCN.list",
+      "file": "Ruleset/SteamCN.list",
+      "sha256": "bf135f78199fbadcb663a047d70eb59ec81bead3a04cfe050036e2921c2ea607",
+      "rules": 16
+    },
+    {
+      "source": "Clash/ChinaMedia.list",
+      "file": "Ruleset/Direct/ChinaMedia.list",
+      "sha256": "69c437c641bbbea0001f33ecf6e8a6333a72f53d537b19ac9fd564d6927a2b21",
+      "rules": 38
+    },
+    {
+      "source": "Clash/Ruleset/BilibiliHMT.list",
+      "file": "Ruleset/BilibiliHMT.list",
+      "sha256": "074d94bc66219f7a229a0ddc7150e3befb088b4fbbe3312dc3f95456b2fef96c",
+      "rules": 21
+    },
+    {
+      "source": "Clash/Ruleset/Bilibili.list",
+      "file": "Ruleset/Bilibili.list",
+      "sha256": "3d111a3c69cb332cdec9c6283acbc9e0c17a62cc25abf43a3390e1667c6861dc",
+      "rules": 20
+    }
+  ]
+}

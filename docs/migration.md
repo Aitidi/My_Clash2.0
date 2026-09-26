@@ -4,12 +4,12 @@
 
 ## 保留行为
 
-- 161 份本地规则原文件逐字节保存在 `rules/`，包含未在当前路由启用的列表。
+- 当前分流所需的自定义规则及其内容保留在 `rules/`。原仓库未引用的列表在后续精简中已删除。
 - 27 个分组的名称、顺序、默认选项、地区正则、测速 URL、间隔和容差全部保留，测试按旧 INI 逐行对比。
 - 广告拦截优先及其余路由先后顺序保留；AdobeBan 原本被注释，继续不启用。
-- 23 份 ACL4SSR 动态规则继续使用原有来源。没有用仓库里可能过时的本地副本替换它们。
+- 原有 23 份 ACL4SSR 规则的路由位置与目标组保持不变；规则内容现按同一上游提交保存于本仓库，不再动态访问 ACL4SSR。
 - DNS 服务器、监听配置、Fake-IP 设置及 Telegram 例外保留。
-- 生成文件继续提供 `Config/my_config.ini`、`Config/dns_config.yaml`、`Ruleset/`、`BlockAD/` 路径。
+- 生成文件继续提供 `Config/my_config.ini`、`Config/dns_config.yaml`、`Ruleset/`、`BlockAD/` 路径，规则目录只含当前引用的 40 份列表。
 
 ## 修复
 
@@ -25,6 +25,8 @@
 ## 使用差异
 
 以前直接修改长 INI；现在修改 `settings/policy.yaml` 后生成。以前直接修改根目录的 `.list`；现在修改 `rules/` 内同名文件。
+
+2026-09-26 的进一步精简将全部 ACL4SSR 引用换成仓库内快照，并移除所有未引用的源与生成列表。要更新快照，执行 `python scripts/update_acl4ssr.py --commit <ACL4SSR 完整提交 SHA>`，再重建并检查差异。
 
 新仓库当前为私有，不能把新的 GitHub Raw 链接直接交给匿名第三方转换服务。使用 `python -m my_clash serve` 配合本机转换后端，或部署生成产物至可访问的静态服务。未改变旧仓库或用户本机代理设置。
 

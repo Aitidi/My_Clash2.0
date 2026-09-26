@@ -16,7 +16,7 @@ rules/**/*.list ──────┘                       │
 - `my_clash/model.py`：读取声明式策略，展开模板，检查分组依赖图、来源路径及 DNS 必需项。重复 YAML 字段直接报错，避免误覆盖。
 - `my_clash/rules.py`：解析普通列表、Surge `[Rule]` 和 Clash `payload`；验证已有规则类型与 CIDR；仅在单个文件内去重，保持首条出现顺序。
 - `my_clash/build.py`：生成 subconverter INI、DNS YAML、标准列表与目录清单；所有输入先校验，每个输出以临时文件加原子替换方式写入。已有正确文件不会重写；不是全目录事务。
-- `my_clash/network.py`：仅在显式调用时检查外部规则 URL，限制超时、并发和响应大小。
+- `scripts/update_acl4ssr.py`：按一个上游提交下载、解析并锁定当前使用的 23 份 ACL4SSR 规则。
 - `my_clash/cli.py`：命令入口和仅监听回环地址的本机配置服务。
 
 使用 Python 标准库和固定版本的 PyYAML；无数据库、无账号系统、无订阅存储。命令默认以当前目录为仓库根，也可使用 `python -m my_clash --root /path/to/repo validate`。
@@ -66,7 +66,7 @@ groups:
 
 保留 `USER-AGENT` 与 `URL-REGEX` 是为了延续原有 subconverter 多目标规则库；不同目标客户端的支持由 subconverter 决定。这里导出的 `.list` 不是完整 Mihomo 配置，也不能假定所有规则都能直接作为 Mihomo 原生 rule-provider 使用。
 
-不会排序规则、跨文件去重或自动移动直连/广告规则，因为这些操作可能改变首次匹配结果。原文件注释含历史计数时，以 `Config/catalog.json` 中的当前生成计数为准。
+不会排序规则、跨文件去重或自动移动直连/广告规则，因为这些操作可能改变首次匹配结果。原文件注释含历史计数时，以 `Config/catalog.json` 中的当前生成计数为准。源目录只能保存 `routes` 实际引用的 `.list`；未引用文件会使校验失败。
 
 移除源列表后若发现相应的旧产物，构建会报错并列出文件。核对后手工删除对应旧产物，或构建到一个新的输出目录；工具不递归清理目录。
 
@@ -76,7 +76,7 @@ groups:
 
 迁移回归测试刻意固定了旧配置语义和基线规则数量。后续主动改变路由、分组、DNS 行为或增删规则时，需要同步调整相应预期并说明原因；不要用覆盖历史快照的方式让测试静默通过。
 
-GitHub Actions 在 Windows / Ubuntu 和 Python 3.11 / 3.14 上安装依赖、校验、运行测试、检查生成产物，并上传独立配置包。通过手动工作流参数可额外检查动态外部规则；网络失败不会污染普通离线 CI。
+GitHub Actions 在 Windows / Ubuntu 和 Python 3.11 / 3.14 上安装依赖、校验、运行测试、检查生成产物，并上传独立配置包。正常 CI 不向 ACL4SSR 请求规则。
 
 另提供真实转换烟雾测试。先在本机启动 subconverter，然后执行：
 
@@ -84,4 +84,4 @@ GitHub Actions 在 Windows / Ubuntu 和 Python 3.11 / 3.14 上安装依赖、校
 python scripts/smoke_subconverter.py --endpoint http://127.0.0.1:25500
 ```
 
-测试在临时目录生成配置和 9 个虚拟 SOCKS5 节点，通过临时回环 HTTP 服务交给 subconverter，检查分组、节点引用、个人规则和最终兜底规则；结束后关闭临时服务。它不会连接测试代理，但 subconverter 需要联网拉取 ACL4SSR 规则。该测试不放入普通离线 CI。
+测试在临时目录生成配置和 9 个虚拟 SOCKS5 节点，通过临时回环 HTTP 服务交给 subconverter，检查分组、节点引用、个人规则和最终兜底规则；结束后关闭临时服务。它不会连接测试代理，也不需要向 ACL4SSR 拉取规则。该测试不放入普通 CI，因为需要单独启动 subconverter。
