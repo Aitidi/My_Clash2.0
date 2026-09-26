@@ -104,3 +104,7 @@ IP-CIDR,116.132.235.0/24,no-resolve
 IP-CIDR,124.237.49.0/24,no-resolve
 IP-CIDR,116.132.190.0/24,no-resolve
 IP-CIDR,111.225.159.0/24,no-resolve
+
+# Wolai
+DOMAIN-SUFFIX,wolai.com
+DOMAIN-SUFFIX,wolai-dingtalk.cn
