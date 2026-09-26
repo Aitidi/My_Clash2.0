@@ -1,5 +1,9 @@
 # Unbreak 白名单 不应该被广告链接的网站
 
+# 共享 DNS 与证书基础设施
+DOMAIN-SUFFIX,akadns.net
+DOMAIN-SUFFIX,omniroot.com
+
 # Epicgames
 DOMAIN-SUFFIX,ol.epicgames.com
 
