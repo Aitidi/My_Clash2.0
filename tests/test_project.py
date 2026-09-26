@@ -57,7 +57,7 @@ class RegressionTests(unittest.TestCase):
         old["fake-ip-filter"] = list(dict.fromkeys(old["fake-ip-filter"]))
         self.assertEqual(old, self.project.dns)
 
-    def test_only_referenced_files_remain_and_render_validly(self):
+    def test_only_referenced_files_remain_and_package_preserves_source(self):
         self.assertEqual(len(self.project.rules), 40)
         self.assertEqual(list(self.project.rules), sorted(self.project.rules))
         self.assertEqual(set(self.project.rules), {route["file"] for route in self.project.routes if "file" in route})
@@ -65,8 +65,8 @@ class RegressionTests(unittest.TestCase):
         for name, value in self.project.rules.items():
             with self.subTest(name=name):
                 parsed = parse_rules(output[name].decode("utf-8"))
-                self.assertEqual(parsed.rules, value.rules)
-                self.assertEqual(parsed.duplicates, 0)
+                self.assertEqual(parsed, value)
+                self.assertEqual(output[name], (ROOT / name).read_bytes())
         catalog = json.loads(output["Config/catalog.json"])
         self.assertEqual(len(catalog["files"]), 40)
         self.assertEqual(catalog["summary"]["rules"], 55305)
@@ -103,14 +103,15 @@ class RegressionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             shutil.copytree(ROOT / "settings", root / "settings")
-            shutil.copytree(ROOT / "rules", root / "rules")
-            path = root / "rules/Ruleset/Google.list"
+            shutil.copytree(ROOT / "Ruleset", root / "Ruleset")
+            shutil.copytree(ROOT / "BlockAD", root / "BlockAD")
+            path = root / "Ruleset/Google.list"
             path.write_bytes(path.read_bytes() + b"\nDOMAIN,tampered.example\n")
             with self.assertRaisesRegex(ConfigError, "锁定校验值"):
                 Project(root)
 
     def test_build_refuses_source_directory(self):
-        for directory in ("rules", "settings", "tests", ".git"):
+        for directory in ("Ruleset", "BlockAD", "settings", "tests", ".git"):
             with self.subTest(directory=directory), self.assertRaises(ConfigError):
                 build(self.project, ROOT / directory)
 
@@ -135,8 +136,8 @@ class ValidationTests(unittest.TestCase):
         (self.root / "settings/acl4ssr-lock.json").unlink()
         self.policy = load_yaml(self.root / "settings/policy.yaml")
         self.policy["routes"] = [{"target": "加速", "file": "Ruleset/Test.list"}, {"target": "漏网之鱼", "rule": "FINAL"}]
-        (self.root / "rules/Ruleset").mkdir(parents=True)
-        (self.root / "rules/Ruleset/Test.list").write_text("DOMAIN,test.example\n", encoding="utf-8")
+        (self.root / "Ruleset").mkdir(parents=True)
+        (self.root / "Ruleset/Test.list").write_text("DOMAIN,test.example\n", encoding="utf-8")
 
     def project(self):
         (self.root / "settings/policy.yaml").write_text(yaml.safe_dump(self.policy, allow_unicode=True), encoding="utf-8")
@@ -148,7 +149,7 @@ class ValidationTests(unittest.TestCase):
             self.project()
 
     def test_unused_rule_file_rejected(self):
-        (self.root / "rules/Ruleset/Unused.list").write_text("DOMAIN,unused.example\n", encoding="utf-8")
+        (self.root / "Ruleset/Unused.list").write_text("DOMAIN,unused.example\n", encoding="utf-8")
         with self.assertRaisesRegex(ConfigError, "未引用"):
             self.project()
 

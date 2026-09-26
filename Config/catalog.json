@@ -13,280 +13,280 @@
       "rules": 590,
       "duplicates_removed": 1,
       "target": "拦截",
-      "sha256": "c38c1140885cfe9b611f7b7a621b3ff89e2bdf20b354b606f1ef76caf2023a01"
+      "sha256": "ad640e8fcca2384d1dced6fa32d8e4709b37af1bf37bfe6b4881575cd407a74b"
     },
     {
       "path": "BlockAD/BanEasyListChina.list",
       "rules": 5050,
       "duplicates_removed": 0,
       "target": "拦截",
-      "sha256": "7979fc3c6ec85d5be74e826ab5f4dc7c4d8192e76c1ec51ab22c20f1dd5c8bc0"
+      "sha256": "dcbc1a18b9723747fc26a3a922c04917b0c15378725035171a502fcf2c2653cf"
     },
     {
       "path": "BlockAD/BanEasyPrivacy.list",
       "rules": 39852,
       "duplicates_removed": 0,
       "target": "拦截",
-      "sha256": "ab33e0051af8fd93b8113cad0d9ccd0237b98c4900f475a70aed9b321eafd4ca"
+      "sha256": "e8422e996453ad7797461db4a597d4c9e16cc7b4824349d30da85dd8b6e1656c"
     },
     {
       "path": "BlockAD/BanProgramAD.list",
       "rules": 996,
       "duplicates_removed": 6,
       "target": "拦截",
-      "sha256": "56b5d5b4e9b8cd5a4e94d65182e77f16a798ce6d9d9d2672d9796df24093f738"
+      "sha256": "3c0fdcf749264db222c012b1a2f850a8d2591104c682c1da0030052451c0a234"
     },
     {
       "path": "Ruleset/Adobe.list",
       "rules": 33,
       "duplicates_removed": 0,
       "target": "Adobe",
-      "sha256": "959e0c018db0a78db12e427b5b5930e7a666a2d26e5ebae53609f592d55f61dc"
+      "sha256": "19472a24f5f9eb70ba8abde3109b50da2ffc8731f3c84bc477a28eaf43102d4c"
     },
     {
       "path": "Ruleset/Aitidi.list",
       "rules": 1,
       "duplicates_removed": 0,
       "target": "Aitidi",
-      "sha256": "4f4ed1f8174a71b80c0fd77a26f2ff6c8d9677a41181ef0c61a476db2a8f52d2"
+      "sha256": "5b5bf98adb6de08d5551cf9a6f1e42859d6e42e05af7eebdd5d8e2ca4ab70532"
     },
     {
       "path": "Ruleset/Apple.list",
       "rules": 29,
       "duplicates_removed": 0,
       "target": "Apple",
-      "sha256": "f4a2b36feef37a070c4ff3d63a9cb4382fcab6a966fc945446d986b166155c38"
+      "sha256": "7b2e60cd0bf3c4bfb1369890d39cc3783bdfcb016089b78acee0ff6f0d4e51c5"
     },
     {
       "path": "Ruleset/Bilibili.list",
       "rules": 20,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "58f61f47982705531f3e95f005d3087aeaec6195e93fbe62f5a92a6e6b3c0fab"
+      "sha256": "3d111a3c69cb332cdec9c6283acbc9e0c17a62cc25abf43a3390e1667c6861dc"
     },
     {
       "path": "Ruleset/BilibiliHMT.list",
       "rules": 21,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "7df8d575e8b1640b6d7cd84f220b245dacf3ac42a07c92a886b58e352739fc41"
+      "sha256": "074d94bc66219f7a229a0ddc7150e3befb088b4fbbe3312dc3f95456b2fef96c"
     },
     {
       "path": "Ruleset/Binance.list",
       "rules": 9,
       "duplicates_removed": 0,
       "target": "Binance",
-      "sha256": "f42125a5c8d78b758121775f9b31f3a829a9db1a938ea6c953c420436e87b138"
+      "sha256": "749e0d81346c651fba948c0c9e172601609418509d031a957875507bfe0e4b75"
     },
     {
       "path": "Ruleset/Direct/Boghma.list",
       "rules": 2,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "5a8bc4b677e1a3850f34b8b3e18ceb1e583c6ffb0dcb11aa71cd82c3ee5e8af4"
+      "sha256": "95a6e284a16d45a68606859ec9f68e55159b284deb50a00e8e7111c01a9f8d70"
     },
     {
       "path": "Ruleset/Direct/ChinaCompanyIp.list",
       "rules": 208,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "f265df1c361f4f18eb50bc8da4e6464a49fd441292bbac7c581fc57176d38fe4"
+      "sha256": "cbc63e3daee0c0467558394ce0cfdd342f28e6c0f903bc4b35b6a5f06279d160"
     },
     {
       "path": "Ruleset/Direct/ChinaDomain.list",
       "rules": 634,
       "duplicates_removed": 1,
       "target": "直连",
-      "sha256": "48a2330e45ac30eb1228c080c260dd8f0aed7ab3059bb92452bbd0e3971c5d68"
+      "sha256": "362edd1f605742b360eaf138f151d7eea96cc17f20ef12da73acbfb80c350e08"
     },
     {
       "path": "Ruleset/Direct/ChinaMedia.list",
       "rules": 38,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "d894aa58ff9d2c3f0c9d74ca6b641c9e83acac374953efdcf0da5c4873663c50"
+      "sha256": "69c437c641bbbea0001f33ecf6e8a6333a72f53d537b19ac9fd564d6927a2b21"
     },
     {
       "path": "Ruleset/Direct/Dingtalk.list",
       "rules": 108,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "e3dcd15018d1162c35532da43c6b43ddb5ad5a032efedf4ce30bd7f87d2e103c"
+      "sha256": "7e25811a5b4718d1b0b444acc86c85685b7cd9f8254ac1709db1d6137f189650"
     },
     {
       "path": "Ruleset/Direct/Download.list",
       "rules": 22,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "2134cb74d4141e20b1a68ddd2b6870b5b45b93ffee2b2566441655cf940cb29f"
+      "sha256": "62b72d16b8f2bcbc80eb2c7af35dc03b31c4d82e732af6d227c2a311f04bdadc"
     },
     {
       "path": "Ruleset/Direct/Linuxdo.list",
       "rules": 1,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "b2e09ba7814304e2da2c41d8d92643ef9ca0386c5b9f2e628c442473599a391f"
+      "sha256": "5df2d541344a86775c96056781d404bf1f4221347e0460a6f06cbbbd8231904c"
     },
     {
       "path": "Ruleset/Direct/LocalAreaNetwork.list",
       "rules": 37,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "2c6050d44e3b59e28255aff1d8f9378de7956652fdb13be76becbf1b55f139f6"
+      "sha256": "0789504d97d8f5b14513c529c61c06f4f862c5cfd20f7cb30bbcd38357e54468"
     },
     {
       "path": "Ruleset/Direct/UnBan.list",
       "rules": 31,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "a04e6d98c291b99f4e4081d57e2fb8bf3bb448daff1107d6e12f3dd73375f9aa"
+      "sha256": "016837560f1f0eeb576f81600c95b547bd82e27ba27a175a3b5010de9bd18ffa"
     },
     {
       "path": "Ruleset/Direct/wolai.list",
       "rules": 2,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "922259c7fd6a24ace2f31b764ed6a61d9019af59542bbd9cea551c597f590324"
+      "sha256": "75caf33abc1624a5df41de5775c8bcef52783667b077d3b618aa7ef60f4f26cb"
     },
     {
       "path": "Ruleset/EDU.list",
       "rules": 1,
       "duplicates_removed": 0,
       "target": "EDU",
-      "sha256": "de344d4895a0609c9a3bac28d96c71bf1a981a82fe6c7aa81148d49092fd0cd0"
+      "sha256": "d49da1f0950ea2504ec69bd7900db3c9371178ac2b9ec2a7fa5b562a7fe383ea"
     },
     {
       "path": "Ruleset/Epic.list",
       "rules": 10,
       "duplicates_removed": 0,
       "target": "Epic",
-      "sha256": "f021984c3623d2e4dfc86d2ffb9d5db232dffb23fbd70d1fd8c10e5dafb0ed22"
+      "sha256": "61f1478bd345797b2d123936e502e6994fb0ba90def5ff399eaaa14985feb9fe"
     },
     {
       "path": "Ruleset/GameDownload.list",
       "rules": 20,
       "duplicates_removed": 0,
       "target": "加速",
-      "sha256": "cc65741cec0873866afa99e1a49bc1a38ef650d5a30839877e754393a8d5b128"
+      "sha256": "60babc26d6c5055a769b9eb810047cc2eca3c57060bca71a27b74e580947bbd7"
     },
     {
       "path": "Ruleset/Google.list",
       "rules": 25,
       "duplicates_removed": 0,
       "target": "Google",
-      "sha256": "a5265fb806b5e1addd1a00391db19d5bbf60e8d7e1a6b92ae151aae864aaa47a"
+      "sha256": "16b21eebc7a8ab3c08dcdb0f601b5c0b7b4182f46643a6180dfb9bb6fb83bd61"
     },
     {
       "path": "Ruleset/GoogleCN.list",
       "rules": 48,
       "duplicates_removed": 0,
       "target": "Google",
-      "sha256": "ee72fc2b58b42e51a2fb286bbd81be849eaf69ca6ae977a03e4fa420a8cceb96"
+      "sha256": "f6321957b557ea4988eb2584a861fedd0e117866c4ff3892283014415898bb08"
     },
     {
       "path": "Ruleset/GoogleCNProxyIP.list",
       "rules": 18,
       "duplicates_removed": 0,
       "target": "Google",
-      "sha256": "e07ae863f162e2f2f24ac75ddac62e0d34a9ecb517576bb37db6cc59e013e269"
+      "sha256": "2404f0bdbcd8f601fff5e3822e14d3726daba3fb8b9ea190ddb24c7d053539d0"
     },
     {
       "path": "Ruleset/GoogleEarth.list",
       "rules": 16,
       "duplicates_removed": 0,
       "target": "Google",
-      "sha256": "823830cb921418e9693c248134572b386f10d243babbaa62902937d2b0315d83"
+      "sha256": "846bda6c3aace0835a2f02fb1b4ddbc54d8b48ea2e621d82c0757456e750b45c"
     },
     {
       "path": "Ruleset/GoogleFCM.list",
       "rules": 44,
       "duplicates_removed": 0,
       "target": "Google",
-      "sha256": "5f68b47c269a274376a30c18bec319c3fb51a00953e924073646801d3d53436e"
+      "sha256": "f115f84bef66a5aa931fd20f23d6914cdfdfe3d07795d65549d578b91a0f0c48"
     },
     {
       "path": "Ruleset/Lenovo.list",
       "rules": 1,
       "duplicates_removed": 0,
       "target": "拦截",
-      "sha256": "c3fb0dcde67e39f9f3ed53d7ab52b97d4d04baa1715b154661e76e7045d50bf3"
+      "sha256": "206f1b68fe3dc9202a6c4c4c0d5db83e5366a257acc9134fa4623a2fb38fa9bb"
     },
     {
       "path": "Ruleset/Microsoft.list",
       "rules": 89,
       "duplicates_removed": 0,
       "target": "Microsoft",
-      "sha256": "c68dd4b52f29c2caecfac5da9aeb9706b5d210475a9ae57c187f667e26bb3ddb"
+      "sha256": "4b87354db78b1b3649ede05cef5c382b39510d8eb13fe1c40cced81531c0c1b2"
     },
     {
       "path": "Ruleset/Netflix.list",
       "rules": 40,
       "duplicates_removed": 0,
       "target": "Netflix",
-      "sha256": "9fac48883f51c73dc7d2affd7e0e000e85008026d37a341c2ab9ee11b187c07f"
+      "sha256": "eb09e16b5aa228230e5770bfc04f2eb25261454a0b2e16f05fd3e9d2ab5202b5"
     },
     {
       "path": "Ruleset/OpenAi.list",
       "rules": 17,
       "duplicates_removed": 0,
       "target": "OpenAI",
-      "sha256": "6750afdf2725f4b0b8f4d808624dbf220d23339b9c051c9977006c2935c0fbc3"
+      "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129"
     },
     {
       "path": "Ruleset/ProxyGFWlist.list",
       "rules": 6883,
       "duplicates_removed": 103,
       "target": "加速",
-      "sha256": "7ffa532e850463a61e71d92c42e7ffcc707b39e82ee3f1b6c76cf1c2e7ffc9f2"
+      "sha256": "72d5f97cb3adedd7ef632962effda4aa3b9953da20427cd6050d55d1184de5ea"
     },
     {
       "path": "Ruleset/ProxyMedia.list",
       "rules": 357,
       "duplicates_removed": 15,
       "target": "加速",
-      "sha256": "b0e581950686dae064f5541d13f56e5873d94d9d2738b10c6a1988e22fe2fbff"
+      "sha256": "fe886c6f537c0214446018f3f64291db8d500c58877d180d2a21a78c19c499e1"
     },
     {
       "path": "Ruleset/Sketchfab.list",
       "rules": 1,
       "duplicates_removed": 0,
       "target": "加速",
-      "sha256": "569e5f9d590f81b365b650ece3b33616dc0d9064b496df44d8a384cfaad046a7"
+      "sha256": "d696cb79e81212398a15a2e48ab225045a830cb3591063aecfc07be3337881db"
     },
     {
       "path": "Ruleset/Steam.list",
       "rules": 18,
       "duplicates_removed": 0,
       "target": "Steam",
-      "sha256": "d1174bb006086054861affc39e6888af6fdaa5281f7478cc38e602ccc84ab52e"
+      "sha256": "0abad0ae490ec9b7bf0cf880f83c5229949b14cc5df448c00a0516225a16b011"
     },
     {
       "path": "Ruleset/SteamCN.list",
       "rules": 16,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "bbe004a668ac4b0da14c34f074bfa87a96bfeb210cb39c2b3fa369f14c2e2fbf"
+      "sha256": "bf135f78199fbadcb663a047d70eb59ec81bead3a04cfe050036e2921c2ea607"
     },
     {
       "path": "Ruleset/Telegram.list",
       "rules": 13,
       "duplicates_removed": 0,
       "target": "Telegram",
-      "sha256": "90737dda21d4d2bd3869b007213a793cde8cf6fa90641d5d07171ae2ed80af44"
+      "sha256": "483f613b31a1c054ddfffa6584b449f4447944ea58b8c1fc06b67eb13c09db89"
     },
     {
       "path": "Ruleset/WeiboAD.list",
       "rules": 1,
       "duplicates_removed": 0,
       "target": "拦截",
-      "sha256": "bd9d9d84cf51245a5f7c4a84ca2371495a3c9eb682961892cf0603a30345d856"
+      "sha256": "8e0789de7366a97b2ed818e76c1c7f051f15b930f9fe1efc3eca4399bf58da5e"
     },
     {
       "path": "Ruleset/Ximalaya.list",
       "rules": 3,
       "duplicates_removed": 0,
       "target": "直连",
-      "sha256": "63c98fc4dddbc6f540ff9e0138475b1403a13d79f7696357b64ff0dfff74814b"
+      "sha256": "86e1dba2d46287cba524247f7554636c8138553ce1c284c5578c42ea230f60cf"
     }
   ]
 }

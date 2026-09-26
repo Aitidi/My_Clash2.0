@@ -13,7 +13,7 @@
     }
   ],
   "notes": [
-    "Original rule source files and comments retained byte-for-byte under rules/.",
-    "AdobeBan remains disabled; no routing order or group defaults changed."
+    "The initial import contained 161 rule files; only referenced files remain in root Ruleset/ and BlockAD/.",
+    "AdobeBan was disabled and has been removed; no routing order or group defaults changed."
   ]
 }

@@ -65,7 +65,7 @@ python -m my_clash build --base-url https://your-host.example/my-clash --output 
 | 分组和地区正则 | `settings/policy.yaml` 的 `groups` |
 | 多个服务共用的选项 | `settings/policy.yaml` 的 `group_templates` |
 | DNS | `settings/dns.yaml` |
-| 本地规则 | `rules/Ruleset/`、`rules/BlockAD/` |
+| 本地规则 | 根目录 `Ruleset/`、`BlockAD/` |
 
 修改后执行：
 
@@ -78,14 +78,14 @@ python -m my_clash build --check
 
 规则按原有顺序匹配。每份源 `.list` 必须在 `routes` 中引用；未引用的文件会使校验失败。维护示例见 [架构与开发说明](docs/architecture.md)。
 
-不要直接修改根目录下的 `Ruleset/`、`BlockAD/`、`Config/my_config.ini`、`Config/dns_config.yaml` 或 `Config/catalog.json`，这些都是生成产物。提交时同时提交源文件和生成产物；CI 会检查两者一致。
+直接修改根目录 `Ruleset/`、`BlockAD/` 中的规则。`Config/my_config.ini`、`Config/dns_config.yaml` 和 `Config/catalog.json` 由构建工具生成，请修改 `settings/` 中的配置后重建。CI 会检查生成配置与源文件一致。
 
 ## 命令
 
 | 命令 | 用途 |
 | --- | --- |
 | `python -m my_clash validate` | 离线检查规则语法、路径大小写、分组引用、循环、兜底规则和 DNS |
-| `python -m my_clash build` | 生成 INI、DNS、40 份被引用的规则列表及带 SHA-256 的目录 |
+| `python -m my_clash build` | 生成 INI、DNS 和带 SHA-256 的规则目录；指定 `--output` 时一并打包 40 份规则 |
 | `python -m my_clash build --check` | 只检查产物差异，有差异返回非零退出码 |
 | `python -m my_clash stats` | 查看 JSON 统计 |
 | `python -m my_clash serve` | 提供本机转换配置 |
@@ -95,4 +95,4 @@ python -m my_clash build --check
 
 ## 来源
 
-被引用的规则及来源注释保留在 `rules/`；未引用的列表已移除。ACL4SSR 的许可证副本位于 `third_party/`。详见 [来源说明](NOTICE.md)。
+被引用的规则及来源注释保留在根目录 `Ruleset/` 和 `BlockAD/`；未引用的列表已移除。ACL4SSR 的许可证副本位于 `third_party/`。详见 [来源说明](NOTICE.md)。

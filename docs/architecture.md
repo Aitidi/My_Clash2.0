@@ -4,9 +4,10 @@
 
 ```text
 settings/policy.yaml ─┐
-settings/dns.yaml ────┼─> Project 校验 ─> 确定性渲染 ─> Config/ + Ruleset/ + BlockAD/
-rules/**/*.list ──────┘                       │
-                                             └─> --check 检测产物差异
+settings/dns.yaml ────┼─> Project 校验 ─> Config/ 中的生成配置
+Ruleset/ + BlockAD/ ─┘          │
+                               ├─> --check 检测生成配置差异
+                               └─> --output 打包配置和原始规则
 ```
 
 `settings/` 与 `Config/` 使用不同名称，确保在 Windows 不区分大小写的文件系统上也能清晰区分源文件和产物。
@@ -14,8 +15,8 @@ rules/**/*.list ──────┘                       │
 ## 代码职责
 
 - `my_clash/model.py`：读取声明式策略，展开模板，检查分组依赖图、来源路径及 DNS 必需项。重复 YAML 字段直接报错，避免误覆盖。
-- `my_clash/rules.py`：解析普通列表、Surge `[Rule]` 和 Clash `payload`；验证已有规则类型与 CIDR；仅在单个文件内去重，保持首条出现顺序。
-- `my_clash/build.py`：生成 subconverter INI、DNS YAML、标准列表与目录清单；所有输入先校验，每个输出以临时文件加原子替换方式写入。已有正确文件不会重写；不是全目录事务。
+- `my_clash/rules.py`：解析普通列表、Surge `[Rule]` 和 Clash `payload`；验证已有规则类型与 CIDR，并报告文件内重复数量，不改写规则内容。
+- `my_clash/build.py`：生成 subconverter INI、DNS YAML 和目录清单；向其他目录打包时原样复制规则。所有输入先校验，每个输出以临时文件加原子替换方式写入。已有正确文件不会重写；不是全目录事务。
 - `scripts/update_acl4ssr.py`：按一个上游提交下载、解析并锁定当前使用的 23 份 ACL4SSR 规则。
 - `my_clash/cli.py`：命令入口和仅监听回环地址的本机配置服务。
 
@@ -23,7 +24,7 @@ rules/**/*.list ──────┘                       │
 
 ## 新增分流
 
-1. 在 `rules/Ruleset/Example.list` 中写入：
+1. 在 `Ruleset/Example.list` 中写入：
 
    ```text
    DOMAIN-SUFFIX,example.com
@@ -36,9 +37,9 @@ rules/**/*.list ──────┘                       │
      file: Ruleset/Example.list
    ```
 
-3. 执行校验、构建和测试。`file` 按大小写精确匹配，且无需写 `rules/` 前缀。
+3. 执行校验、构建和测试。`file` 按大小写精确匹配，直接使用仓库相对路径。
 
-路由来源只能是 `file`、`url`、`rule` 中的一种。内置规则支持 `GEOIP,国家代码`（可带 `no-resolve`）和最后的 `FINAL`；重复来源直接报错。停用规则只需移除路由，源列表仍可保留。
+路由来源只能是 `file`、`url`、`rule` 中的一种。内置规则支持 `GEOIP,国家代码`（可带 `no-resolve`）和最后的 `FINAL`；重复来源直接报错。停用规则时也需移除不再被引用的 `.list` 文件。
 
 ## 分组模板
 
@@ -66,9 +67,9 @@ groups:
 
 保留 `USER-AGENT` 与 `URL-REGEX` 是为了延续原有 subconverter 多目标规则库；不同目标客户端的支持由 subconverter 决定。这里导出的 `.list` 不是完整 Mihomo 配置，也不能假定所有规则都能直接作为 Mihomo 原生 rule-provider 使用。
 
-不会排序规则、跨文件去重或自动移动直连/广告规则，因为这些操作可能改变首次匹配结果。原文件注释含历史计数时，以 `Config/catalog.json` 中的当前生成计数为准。源目录只能保存 `routes` 实际引用的 `.list`；未引用文件会使校验失败。
+不会排序、改写或跨文件去重，因为这些操作可能改变首次匹配结果。原文件注释含历史计数时，以 `Config/catalog.json` 中的当前解析计数为准。规则目录只能保存 `routes` 实际引用的 `.list`；未引用文件会使校验失败。
 
-移除源列表后若发现相应的旧产物，构建会报错并列出文件。核对后手工删除对应旧产物，或构建到一个新的输出目录；工具不递归清理目录。
+向已有外部目录打包时，若发现不属于当前规则集的旧 `.list`，构建会报错并列出文件。核对后手工删除，或换一个空目录打包；工具不递归清理目录。
 
 ## 测试和 CI
 

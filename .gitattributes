@@ -1,3 +1,4 @@
 * text=auto eol=lf
-rules/** -text
+Ruleset/** -text
+BlockAD/** -text
 tests/fixtures/** -text

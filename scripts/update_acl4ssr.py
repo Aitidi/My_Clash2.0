@@ -46,10 +46,10 @@ def refresh(commit: str | None = None) -> dict:
     for item in entries:
         source = item["source"]
         destination = item["file"]
-        path = ROOT / "rules" / destination
+        path = ROOT / destination
         if (
             not source.startswith("Clash/") or not source.endswith(".list")
-            or not path.resolve().is_relative_to(ROOT / "rules")
+            or not path.resolve().is_relative_to(ROOT / destination.split("/", 1)[0])
             or not destination.endswith(".list")
         ):
             raise ConfigError(f"不合法的上游映射: {item}")

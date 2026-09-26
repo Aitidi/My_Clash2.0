@@ -4,7 +4,7 @@
 - `dns_config.yaml`：Clash Verge Rev 本地 DNS 设置片段。
 - `catalog.json`：所有本地规则文件的数量、启用策略、文件内去重数量与生成内容 SHA-256。
 
-修改 `settings/` 与 `rules/` 后运行 `python -m my_clash build` 更新产物。
+修改 `settings/`、根目录 `Ruleset/` 或 `BlockAD/` 后运行 `python -m my_clash build` 更新配置和目录清单。打包到其他目录时，工具会复制当前规则文件。
 
 ## Telegram / OpenClaw 媒体下载
 

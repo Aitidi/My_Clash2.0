@@ -148,16 +148,16 @@ class Project:
         self.base_url = check_url(self.policy["publish"]["base_url"], base=True)
         self.groups = expand_groups(self.policy)
         self.rules: dict[str, RuleList] = {}
-        paths = (self.root / "rules").rglob("*.list")
-        for path in sorted(paths, key=lambda item: item.relative_to(self.root / "rules").as_posix()):
-            if not path.resolve().is_relative_to(self.root / "rules"):
-                raise ConfigError(f"规则文件越出 rules 目录: {path}")
-            relative = path.relative_to(self.root / "rules").as_posix()
+        paths = [path for directory in ("Ruleset", "BlockAD") for path in (self.root / directory).rglob("*.list")]
+        for path in sorted(paths, key=lambda item: item.relative_to(self.root).as_posix()):
+            relative = path.relative_to(self.root).as_posix()
             if PurePosixPath(relative).parts[0] not in {"Ruleset", "BlockAD"}:
                 raise ConfigError(f"规则目录必须位于 Ruleset 或 BlockAD: {relative}")
+            if not path.resolve().is_relative_to(self.root / PurePosixPath(relative).parts[0]):
+                raise ConfigError(f"规则文件越出规则目录: {path}")
             self.rules[relative] = parse_rules(path.read_text(encoding="utf-8-sig"), relative)
         if not self.rules:
-            raise ConfigError("rules 目录没有规则文件")
+            raise ConfigError("Ruleset 和 BlockAD 目录没有规则文件")
         self.routes = self.policy["routes"]
         self._validate_routes()
         self._validate_vendor_lock()
@@ -225,7 +225,7 @@ class Project:
         for name, source in mapping.items():
             if name not in used or name not in self.rules or locked[name]["source"] != source:
                 raise ConfigError(f"ACL4SSR 规则未引用或来源不符: {name}")
-            digest = sha256((self.root / "rules" / name).read_bytes()).hexdigest()
+            digest = sha256((self.root / name).read_bytes()).hexdigest()
             if locked[name]["sha256"] != digest:
                 raise ConfigError(f"ACL4SSR 规则与锁定校验值不符: {name}")
 
