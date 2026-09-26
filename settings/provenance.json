@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/Aitidi/My_Clash",
+  "commit": "ee8a9461374a480c4cb858073ab7585ff0377155",
+  "imported_rule_files": 161,
+  "removed_routes": [
+    {
+      "target": "加速",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list"
+    },
+    {
+      "target": "直连",
+      "file": "Ruleset/aitidi.list"
+    }
+  ],
+  "notes": [
+    "Original rule source files and comments retained byte-for-byte under rules/.",
+    "AdobeBan remains disabled; no routing order or group defaults changed."
+  ]
+}

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-clash-config"
+version = "2.0.0"
+description = "Validated, reproducible Clash subscription configuration"
+requires-python = ">=3.11"
+dependencies = ["PyYAML==6.0.3"]
+
+[project.scripts]
+my-clash = "my_clash.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["my_clash*"]
