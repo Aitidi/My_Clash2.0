@@ -1,0 +1,9 @@
+# 内容：Claude
+# 数量：6条
+# 来源：https://code.claude.com/docs/en/desktop#network-access-requirements
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claude.app
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpcontent.com

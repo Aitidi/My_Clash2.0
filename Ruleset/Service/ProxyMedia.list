@@ -1,23 +1,17 @@
 # 内容：国外媒体列表
 # 更新：2025-12-06 10:28:17
-# 数量：262条
+# 数量：256条
 
 # ABC
 DOMAIN-SUFFIX,edgedatg.com
 DOMAIN-SUFFIX,go.com
 
 # AI
-DOMAIN-KEYWORD,anthropic
-DOMAIN-KEYWORD,claude
 DOMAIN,api.githubcopilot.com
 DOMAIN,api.groq.com
 DOMAIN,api.together.xyz
 DOMAIN,console.groq.com
 DOMAIN,copilot-proxy.githubusercontent.com
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claude.com
-DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,grazie.ai
