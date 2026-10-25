@@ -1,9 +1,9 @@
-# My_Clash2.0
+# clash-rules
 
 供 [subconverter](https://github.com/tindy2013/subconverter) 使用的静态外部配置。填写以下配置地址，并另外填写你自己的订阅地址：
 
 ```text
-https://raw.githubusercontent.com/Aitidi/My_Clash2.0/main/Config/my_config.ini
+https://raw.githubusercontent.com/Aitidi/clash-rules/main/Config/my_config.ini
 ```
 
 `Config/my_config.ini` 引用本仓库 `Ruleset/` 中的 40 份规则列表，按用途分为：
